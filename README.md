@@ -8,8 +8,9 @@ Trackgenix only requires a browser.
 2) Open the file "index.html"
 
 ### Week 02
-Created index.html 
-Created README.md
+Create index.html 
+
+Create README.md
 
 
 _By Julian Viso_
