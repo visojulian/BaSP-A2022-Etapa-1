@@ -7,6 +7,9 @@ Trackgenix only requires a browser.
 1) Access to the folder "Semana-01"
 2) Open the file "index.html"
 
+### Week 01
+Created Employee views in Figma 
+
 ### Week 02
 Create index.html 
 
