@@ -1,3 +1,61 @@
-* {
-    margin: 0;
+body {
+    font-family: Roboto;
+    color: #373867;
+}
+
+aside {
+    display: inline-block;
+    width: 20%;
+}
+
+header {
+    margin-top: 30px;
+    border-bottom: 2px solid #FF3E1D;
+    font-size: 14px;
+}
+
+header div {
+    display: inline-block;
+    width: 86%
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h1 span {
+    display: block;
+}
+
+#header-icons {
+    display: inline-block;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.social-media-icons {
+    font-size: 29px;
+}
+
+.social-media-icons a {
+    color: #5D5D5D;
+    text-decoration: none;
+}
+
+#main-container {
+    display: inline-block;
+    width: 79%;
+}
+
+#main-title {
+    margin-top: 45px;
+}
+
+#main-title div {
+    padding-right: 107px;
+    display: inline-block;
+    width: 61%;
 }
