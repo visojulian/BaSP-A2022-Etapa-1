@@ -11,6 +11,25 @@ aside {
     background-color: #AACE9B;
 }
 
+nav {
+    padding: 65px 0px;
+    border-bottom: 1px solid #37386785;
+}
+
+nav a {
+    color: #373867;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav li {
+    padding: 10px 0px;
+}
+
+nav li + li {
+    border-top: 1px solid #37386769;
+}
+
 header {
     margin-top: 30px;
     border-bottom: 2px solid #FF3E1D;
@@ -36,6 +55,50 @@ h2 {
     border-bottom: 2px solid #FF3E1D;
     font-size: 30px;
     font-weight: bold;
+}
+
+#aside-contact {
+    padding-top: 65px;
+}
+
+#aside-contact h2 {
+    margin-bottom: 25px;
+}
+
+#aside-contact p {
+    margin-bottom: 35px;
+    font-size: 14px;
+    font-weight: medium;
+}
+
+#aside-contact-info a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #373867;
+}
+
+#aside-contact-info p {
+    display: inline;
+}
+
+#aside-contact-info div {
+    padding: 5px 0px;
+    vertical-align: middle;
+}
+
+#aside-contact-info div + div {
+    border-top: 1px solid #37386770;
+}
+
+#aside-contact-info div > div {
+    display: inline-block;
+    width: 190px;
+}
+
+#aside-contact-info i {
+    display: inline;
+    margin: 0px 10px;
+    font-size: 20px;
 }
 
 #header-icons {
