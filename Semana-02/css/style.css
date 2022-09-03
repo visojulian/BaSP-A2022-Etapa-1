@@ -52,10 +52,39 @@ h1 span {
 
 #main-title {
     margin-top: 45px;
+    padding-bottom: 55px;
+    border-bottom: 2px solid #37386770;
 }
 
 #main-title div {
-    padding-right: 107px;
     display: inline-block;
     width: 61%;
+    margin-right: 75px;
+    vertical-align: top;
+}
+
+.subheader {
+    font-size: 20px;
+    margin: 40px 0px 39px 0px;
+}
+
+#main-title p + p {
+    margin-bottom: 29px;
+    font-weight: 600;
+}
+
+.button {
+    padding: 10px 35px;
+    background-color: #fff;
+    border: 2px solid #FF3E1D;
+    border-radius: 5px;
+    color: #FF3E1D;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    color: #373867;
+    background-color: #FF3E1D;
 }
