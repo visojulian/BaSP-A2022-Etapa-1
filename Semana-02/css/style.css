@@ -57,6 +57,12 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 #aside-contact {
     padding-top: 65px;
 }
@@ -68,7 +74,7 @@ h2 {
 #aside-contact p {
     margin-bottom: 35px;
     font-size: 14px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 #aside-contact-info a {
@@ -160,4 +166,35 @@ h2 {
 .button:hover {
     color: #373867;
     background-color: #FF3E1D;
+}
+
+#reasons {
+    margin-top: 35px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #37386770;
+}
+
+#reasons h2 {
+    margin-right: 70%;
+}
+
+#reasons article {
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding-right: 65px;
+    font-size: 14px;
+}
+
+#reasons img {
+    display: inline-block;
+}
+
+#reasons div {
+    display: inline-block;
+    width: 71%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
 }
