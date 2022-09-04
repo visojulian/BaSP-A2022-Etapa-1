@@ -226,7 +226,7 @@ textarea {
     width: 474px;
 }
 
-#features h3, #features button {
+#features h3, #features button, #our-history h3 {
     margin: 25px 0px;
 }
 
@@ -276,4 +276,32 @@ textarea {
 .btn-send {
     width: 110px;
     background-color: #AACE9B;
+}
+
+#our-history div > img {
+    float: left;
+    margin: 0px 10px 20px 0px;
+    width: 330px;
+}
+
+#our-history p + img {
+    float: right;
+    margin-bottom: 10px;
+    width: 380px;
+}
+
+#our-history p {
+    margin-bottom: 10px;
+}
+
+#our-history > div {
+    width: 80%;
+}
+
+#our-history div + div {
+    width: 95%;
+}
+
+#our-history {
+    padding-bottom: 45px;
 }
