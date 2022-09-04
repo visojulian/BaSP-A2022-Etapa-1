@@ -78,6 +78,28 @@ article {
     font-size: 14px;
 }
 
+form {
+    margin-top: 20px;
+    font: normal 14px 'Roboto';
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 86%;
+    margin: 5px 0px 35px 0px;
+    padding: 8px;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    margin-bottom: 15px;
+}
+
 #aside-contact {
     padding-top: 65px;
 }
@@ -206,4 +228,52 @@ article {
 
 #features h3, #features button {
     margin: 25px 0px;
+}
+
+#contact-form {
+    margin-top: 2px;
+    padding-bottom: 15px;
+}
+
+#form-name-email {
+    display: inline-block;
+    width: 59%;
+}
+
+#contact-area {
+    display: inline-block;
+    width: 39%;
+    vertical-align: top;
+}
+
+#contact-area label, #contact-area input {
+    display: inline-block;
+    margin: 5px 0px;
+    width: initial;
+}
+
+#contact-area p {
+    margin-bottom: 8px;
+}
+
+.input-radio {
+    display: block;
+}
+
+.button-form {
+    display: inline-block;
+    width: 70px;
+    margin-right: 10px;
+    margin-bottom: initial;
+    background-color: #FF3E1D;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    color: #373867;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.btn-send {
+    width: 110px;
+    background-color: #AACE9B;
 }
