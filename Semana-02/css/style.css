@@ -242,6 +242,7 @@ footer li a:hover {
 
 #reasons img {
     display: inline-block;
+    width: 28%;
 }
 
 #reasons div {
@@ -308,6 +309,15 @@ footer li a:hover {
     background-color: #AACE9B;
 }
 
+.btn-send:hover {
+    background-color: #4EB125;
+}
+
+#our-history {
+    padding-bottom: 45px;
+    min-height: 535px;
+}
+
 #our-history div > img {
     float: left;
     margin: 0px 10px 20px 0px;
@@ -330,10 +340,6 @@ footer li a:hover {
 
 #our-history div + div {
     width: 95%;
-}
-
-#our-history {
-    padding-bottom: 45px;
 }
 
 #footer-icons {
