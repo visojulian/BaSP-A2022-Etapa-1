@@ -5,8 +5,8 @@ body {
 
 aside {
     position: fixed;
-    width: 240px;
-    height: 900px;
+    width: 17%;
+    height: 100%;
     padding: 30px;
     background-color: #AACE9B;
 }
@@ -16,18 +16,18 @@ nav {
     border-bottom: 1px solid #37386785;
 }
 
-nav a {
-    color: #373867;
-    font-size: 20px;
-    text-decoration: none;
-}
-
 nav li {
     padding: 10px 0px;
 }
 
 nav li + li {
     border-top: 1px solid #37386769;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #373867;
 }
 
 header {
@@ -71,8 +71,8 @@ h3 {
 
 article {
     display: inline-block;
-    width: 49%;
     box-sizing: border-box;
+    width: 49%;
     margin-top: 25px;
     padding-right: 65px;
     font-size: 14px;
@@ -101,8 +101,8 @@ textarea {
 }
 
 ol {
-    text-align: left;
     padding-left: 100px;
+    text-align: left;
 }
 
 footer {
@@ -117,8 +117,8 @@ footer div {
 }
 
 footer li a {
-    color: #373867;
     text-decoration: none;
+    color: #373867;
 }
 
 footer li a:hover {
@@ -139,17 +139,6 @@ footer li a:hover {
     font-weight: 500;
 }
 
-#aside-contact-info a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #373867;
-}
-
-#aside-contact-info p {
-    display: inline;
-    font-weight: normal;
-}
-
 #aside-contact-info div {
     padding: 5px 0px;
     vertical-align: middle;
@@ -164,18 +153,34 @@ footer li a:hover {
     width: 190px;
 }
 
+#aside-contact-info a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #373867;
+}
+
+#aside-contact-info p {
+    display: inline;
+    font-weight: normal;
+}
+
 #aside-contact-info i {
     display: inline;
     margin: 0px 10px;
     font-size: 20px;
 }
 
-#header-icons {
+#main-container {
     display: inline-block;
+    padding: 0 1% 0 23%;
 }
 
 .text-bold {
     font-weight: bold;
+}
+
+#header-icons {
+    display: inline-block;
 }
 
 .social-media-icons {
@@ -183,18 +188,13 @@ footer li a:hover {
 }
 
 .social-media-icons a {
-    color: #5D5D5D;
     text-decoration: none;
+    color: #5D5D5D;
 }
 
 .social-media-icons a:hover {
-    color: #FF3E1D;
     text-decoration: none;
-}
-
-#main-container {
-    display: inline-block;
-    padding: 0px 15px 0px 335px;
+    color: #FF3E1D;
 }
 
 #main-title {
@@ -211,8 +211,8 @@ footer li a:hover {
 }
 
 .subheader {
-    font-size: 20px;
     margin: 40px 0px 39px 0px;
+    font-size: 20px;
 }
 
 #main-title p + p {
@@ -225,31 +225,31 @@ footer li a:hover {
     background-color: #fff;
     border: 2px solid #FF3E1D;
     border-radius: 5px;
-    color: #FF3E1D;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
+    color: #FF3E1D;
 }
 
 .button:hover {
-    color: #373867;
     background-color: #FF3E1D;
+    color: #373867;
 }
 
-#reasons h2, #features h2 {
+.margin-right-x7 {
     margin-right: 70%;
 }
 
 #reasons img {
     display: inline-block;
-    width: 28%;
+    width: 132px;
 }
 
 #reasons div {
     display: inline-block;
+    box-sizing: border-box;
     width: 71%;
     padding-left: 20px;
-    box-sizing: border-box;
     vertical-align: top;
 }
 
@@ -259,11 +259,6 @@ footer li a:hover {
 
 #features h3, #features button, #our-history h3 {
     margin: 25px 0px;
-}
-
-#contact-form {
-    margin-top: 2px;
-    padding-bottom: 15px;
 }
 
 #form-name-email {
@@ -296,12 +291,16 @@ footer li a:hover {
     width: 70px;
     margin-right: 10px;
     margin-bottom: initial;
-    background-color: #FF3E1D;
+    background-color: #FF3E1D99;
     border: 1px solid #373867;
     border-radius: 5px;
-    color: #373867;
     font-size: 12px;
     font-weight: 500;
+    color: #373867;
+}
+
+.button-form:hover {
+    background-color: #FF3E1D;
 }
 
 .btn-send {
@@ -319,15 +318,15 @@ footer li a:hover {
 }
 
 #our-history div > img {
-    float: left;
     margin: 0px 10px 20px 0px;
     width: 330px;
+    float: left;
 }
 
 #our-history p + img {
-    float: right;
     margin-bottom: 10px;
     width: 380px;
+    float: right;
 }
 
 #our-history p {
