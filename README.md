@@ -4,32 +4,35 @@
 ## How to open
 Trackgenix only requires a browser.
 
-1) Access to the folder "Semana-01"
-2) Open the file "index.html"
+1) Find the week you want to explore (listed below)
+2) Open the week folder (Semana-01, Semana-02, etc)
+3) Open the file "index.html" inside the folder
 
 ---
 ### Week 00 - Figma
-Created Employee views in Figma 
+Created app views in Figma 
+
+My personal task was: Employee-views
+
+Only thinking in screenflow and errors
 
 ---
 ### Week 01 - HTML
-Create "Semana-01" folder
+New folders: Semana-01, assets
 
-Create index.html displaying all content whitout any styles.
+Create docs: index.html and README.md
 
-Create "assets" folder, including images and "font-awesome" folder with icons
+Including: font-awesome icons
 
-Create README.md
+This week is only for HTML structure basics. No rush.
 
 ---
 ### Week 02 - CSS
-Create "Semana-02" folder
+New folder: Semana-02, css
 
-Updating README
+Create docs: reset.css and style.css
 
-Create "css" folder and style.css
-
-Uploading reset.css
+Focus on styling the landing page. Not responsive yet, only the main concepts. No rush.
 
 ---
 
