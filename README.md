@@ -35,5 +35,13 @@ Create docs: reset.css and style.css
 Focus on styling the landing page. Not responsive yet, only the main concepts. No rush.
 
 ---
+### Week 03 - Flexbox
+New folder: Semana-03
+
+Create docs: header.css - footer.css - main.css - sidebar.css
+
+Applying Flexbox to entire page, making responsive by useing media query breakpoints.
+
+---
 
 _By Julian Viso_
