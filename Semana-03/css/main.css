@@ -174,31 +174,29 @@ section#contact-form form {
     background-color: #4EB125;
 }
 
-#our-history {
+/* Our history */
+section#our-history {
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 45px;
-    min-height: 535px;
 }
 
-#our-history div > img {
-    margin: 0px 10px 20px 0px;
-    width: 330px;
+section#our-history div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    margin-top: 10px;
+}
+
+section#our-history div p {
+    margin-top: 10px;
+}
+
+section#our-history img {
     float: left;
+    margin: 0px 5px 5px 5px;
 }
 
-#our-history p + img {
-    margin-bottom: 10px;
-    width: 380px;
+section#our-history p + p img {
     float: right;
-}
-
-#our-history p {
-    margin-bottom: 10px;
-}
-
-#our-history > div {
-    width: 80%;
-}
-
-#our-history div + div {
-    width: 95%;
 }
