@@ -105,35 +105,53 @@ section#features h3 {
 }
 
 /* Get some info */
+section#contact-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 #form-name-email {
-    display: inline-block;
-    width: 59%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 #contact-area {
-    display: inline-block;
-    width: 39%;
-    vertical-align: top;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
 #contact-area label, #contact-area input {
-    display: inline-block;
+    flex: auto;
     margin: 5px 0px;
-    width: initial;
 }
 
 #contact-area p {
+    width: 100%;
     margin-bottom: 8px;
 }
 
-.input-radio {
-    display: block;
+#contact-area div.input-radio {
+    display: flex;
+}
+
+#contact-area input {
+    width: auto;
+    margin: 0px 5px;
 }
 
 .button-form {
-    display: inline-block;
     width: 70px;
-    margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: initial;
     background-color: #FF3E1D99;
     border: 1px solid #373867;

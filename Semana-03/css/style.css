@@ -71,8 +71,8 @@ label {
 }
 
 input, textarea {
-    width: 86%;
-    margin: 5px 0px 35px 0px;
+    width: 96%;
+    margin: 10px 0px;
     padding: 8px;
     border: 1px solid #373867;
     border-radius: 5px;
