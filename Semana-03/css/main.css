@@ -1,7 +1,6 @@
 main {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 #main-container {
@@ -9,6 +8,7 @@ main {
     margin: auto;
 }
 
+/* Main title */
 #main-title {
     display: flex;
     flex-wrap: wrap;
@@ -57,31 +57,54 @@ main {
     color: #373867;
 }
 
-.margin-right-x7 {
-    margin-right: 70%;
+/* Why you should use me */
+section#reasons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#reasons img {
-    display: inline-block;
+section#reasons article {
+    justify-content: center;
+    width: 50%;
+}
+
+section#reasons img {
     width: 132px;
 }
 
-#reasons div {
-    /* display: inline-block; */
+section#reasons div {
     box-sizing: border-box;
     width: 71%;
     padding-left: 20px;
     vertical-align: top;
 }
 
-#features img {
-    width: 474px;
+/* Features */
+section#features {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#features h3, #features button, #our-history h3 {
+section#features h2 {
+    margin-bottom: 10px;
+}
+
+section#features article {
+    justify-content: center;
+    width: 90%;
+    margin: 10px auto;
+}
+
+section#features img {
+    width: 100%;
+}
+
+section#features h3 {
+    flex: auto;
     margin: 25px 0px;
 }
 
+/* Get some info */
 #form-name-email {
     display: inline-block;
     width: 59%;
