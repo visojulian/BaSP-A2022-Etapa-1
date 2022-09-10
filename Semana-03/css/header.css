@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 2px solid #FF3E1D;
+    font-size: 14px;
+}
+
+header div {
+    margin-bottom: 10px;
+}
+
+header .social-media-icons {
+    display: none;
+}
