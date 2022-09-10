@@ -1,0 +1,37 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer div ol {
+    padding-left: 25px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #373867;
+}
+
+footer li a:hover {
+    color: #171877;
+}
+
+footer p {
+    text-align: center;
+}
+
+#footer-icons {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    margin: 30px 0px;
+    border-top: 2px solid #37386770;
+}
