@@ -3,6 +3,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
+    padding-bottom: 30px;
 }
 
 footer div {
@@ -12,16 +13,17 @@ footer div {
 }
 
 footer div ol {
-    padding-left: 25px;
+    padding-left: 45px;
 }
 
 footer li a {
+    display: block;
     text-decoration: none;
     color: #373867;
 }
 
 footer li a:hover {
-    color: #171877;
+    color: #17187790;
 }
 
 footer p {

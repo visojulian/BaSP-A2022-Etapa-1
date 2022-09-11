@@ -11,76 +11,54 @@ main {
 /* Main title */
 #main-title {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column-reverse;
     border-bottom: 2px solid #37386770;
-    text-align: center;
 }
 
 #main-title div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
+    width: 100%;
+}
+
+#main-title > span {
+    display: block;
+    flex: 0 0 auto;
+    max-height: 375px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #main-title img {
-    flex: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .subheader {
     margin: 20px 0px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #main-title p + p {
-    margin-bottom: 29px;
     font-weight: 600;
-}
-
-.button {
-    order: 1;
-    margin-top: 20px;
-    flex: auto;
-    padding: 8px 30px;
-    background-color: #fff;
-    border: 2px solid #FF3E1D;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #FF3E1D;
-}
-
-.button:hover {
-    background-color: #FF3E1D;
-    color: #373867;
 }
 
 /* Why you should use me */
-section#reasons {
+section#reasons > div {
     display: flex;
     flex-wrap: wrap;
 }
 
 section#reasons article {
-    justify-content: center;
-    width: 50%;
+    display: flex;
 }
 
 section#reasons img {
     width: 132px;
-}
-
-section#reasons div {
-    box-sizing: border-box;
-    width: 71%;
-    padding-left: 20px;
-    vertical-align: top;
+    margin-right: 20px;
 }
 
 /* Features */
-section#features {
+section#features div {
     display: flex;
     flex-wrap: wrap;
 }
@@ -90,17 +68,14 @@ section#features h2 {
 }
 
 section#features article {
+    flex-wrap: wrap;
     justify-content: center;
     width: 90%;
     margin: 10px auto;
 }
 
-section#features img {
-    width: 100%;
-}
-
 section#features h3 {
-    flex: auto;
+    width: 100%;
     margin: 25px 0px;
 }
 
@@ -188,15 +163,18 @@ section#our-history div {
     margin-top: 10px;
 }
 
-section#our-history div p {
-    margin-top: 10px;
+section#our-history span.wrap-img {
+    display: block;
+    max-width: 40%;
+    margin: 0px 5px 5px 5px;
+    float: left;
+}
+
+section#our-history p + p span.wrap-img {
+    margin: 5px 0px 5px 5px;
+    float: right;
 }
 
 section#our-history img {
-    float: left;
-    margin: 0px 5px 5px 5px;
-}
-
-section#our-history p + p img {
-    float: right;
+    width: 100%;
 }

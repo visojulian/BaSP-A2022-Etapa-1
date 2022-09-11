@@ -38,11 +38,12 @@ section {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 h2 {
+    display: inline-block;
     border-bottom: 2px solid #FF3E1D;
     font-size: 30px;
     font-weight: bold;
@@ -56,7 +57,6 @@ h3 {
 
 article {
     display: flex;
-    flex-wrap: wrap;
     margin-top: 25px;
     font-size: 14px;
 }
@@ -144,4 +144,22 @@ textarea {
 
 .social-media-icons a:hover {
     color: #FF3E1D;
+}
+
+.button {
+    margin-top: 20px;
+    flex: auto;
+    padding: 8px 30px;
+    background-color: #fff;
+    border: 2px solid #FF3E1D;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FF3E1D;
+}
+
+.button:hover {
+    background-color: #FF3E1D;
+    color: #373867;
 }
