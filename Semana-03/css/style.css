@@ -4,34 +4,6 @@ body {
     color: #373867;
 }
 
-aside {
-    display: none;
-    position: fixed;
-    width: 17%;
-    height: 100%;
-    padding: 30px;
-    background-color: #AACE9B;
-}
-
-nav {
-    padding: 65px 0px;
-    border-bottom: 1px solid #37386785;
-}
-
-nav li {
-    padding: 10px 0px;
-}
-
-nav li + li {
-    border-top: 1px solid #37386769;
-}
-
-nav a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #373867;
-}
-
 section {
     flex: auto;
     margin-top: 35px;
@@ -83,51 +55,6 @@ input, textarea {
 
 textarea {
     margin-bottom: 15px;
-}
-
-#aside-contact {
-    padding-top: 65px;
-}
-
-#aside-contact h2 {
-    margin-bottom: 25px;
-}
-
-#aside-contact p {
-    margin-bottom: 35px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-#aside-contact-info div {
-    padding: 5px 0px;
-    vertical-align: middle;
-}
-
-#aside-contact-info div + div {
-    border-top: 1px solid #37386770;
-}
-
-#aside-contact-info div > div {
-    display: inline-block;
-    width: 190px;
-}
-
-#aside-contact-info a {
-    text-decoration: none;
-    font-size: 14px;
-    color: #373867;
-}
-
-#aside-contact-info p {
-    display: inline;
-    font-weight: normal;
-}
-
-#aside-contact-info i {
-    display: inline;
-    margin: 0px 10px;
-    font-size: 20px;
 }
 
 /* Global classes */
