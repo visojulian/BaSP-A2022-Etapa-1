@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 15px;
     color: #373867;
 }
 
@@ -39,7 +40,7 @@ section {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 21px;
     font-weight: bold;
 }
 

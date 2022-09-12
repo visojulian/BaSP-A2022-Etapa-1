@@ -35,11 +35,7 @@ main {
 
 .subheader {
     margin: 20px 0px;
-    font-size: 18px;
-}
-
-#main-title p + p {
-    font-weight: 600;
+    font-size: 17px;
 }
 
 /* Why you should use me */
@@ -69,17 +65,16 @@ section#features h2 {
 
 section#features article {
     flex-wrap: wrap;
-    width: 45%;
-    margin: 10px 5px;
+    margin: 10px 0px;
 }
 
-section#features article:nth-child(even) {
+/* section#features article:nth-child(even) {
     padding-left: 20px;
     border-left: #37386730 1px solid;
-}
-
+} */
 section#features article span {
     display: block;
+    flex: auto;
 }
 
 section#features article img {
@@ -168,7 +163,7 @@ section#our-history div {
     margin-top: 10px;
 }
 
-section#our-history span.wrap-img {
+/* section#our-history span.wrap-img {
     margin: 0px 5px 5px 5px;
     float: left;
 }
@@ -176,8 +171,7 @@ section#our-history span.wrap-img {
 section#our-history p + p span.wrap-img {
     margin: 5px 0px 5px 5px;
     float: right;
-}
-
+} */
 section#our-history img {
     width: 100%;
 }
