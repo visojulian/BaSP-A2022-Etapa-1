@@ -177,7 +177,9 @@
                     </h2>
                     <div>
                         <article>
-                            <img src="assets/clock.png" alt="clock">
+                            <span>
+                                <img src="assets/clock.png" alt="clock">
+                            </span>
                             <h3>
                                 Hours Log
                             </h3>
@@ -190,7 +192,9 @@
                             </button>
                         </article>
                         <article>
-                            <img src="assets/books.png" alt="books">
+                            <span>
+                                <img src="assets/books.png" alt="books">
+                            </span>
                             <h3>
                                 Reports
                             </h3>
@@ -203,7 +207,9 @@
                             </button>
                     </article>
                     <article>
-                        <img src="assets/board.png" alt="board">
+                        <span>
+                            <img src="assets/board.png" alt="board">
+                        </span>
                         <h3>
                             Resource Management
                         </h3>
@@ -216,7 +222,9 @@
                         </button>
                     </article>
                     <article>
-                        <img src="assets/meeting.png" alt="people in a meeting">
+                        <span>
+                            <img src="assets/meeting.png" alt="people in a meeting">
+                        </span>
                         <h3>
                             Multiple Roles
                         </h3>
@@ -235,37 +243,39 @@
                         Get some info
                     </h2>
                     <form>
-                        <div id="form-name-email">
-                                <label for="name">
-                                    Full name:
-                                </label>
-                                <input type="text" name="name" id="name" placeholder="Full name" required>
-                                <label for="email">
-                                    Email:
-                                </label>
-                                <input type="email" name="email" id="email" placeholder="Email" required>
-                        </div>
-                        <div id="contact-area">
-                            <p>
-                                Contact area:
-                            </p>
-                            <div class="input-radio">
-                                <input type="radio" id="human-resources" name="contact-area" value="human-resources">
-                                <label for="human-resources">
-                                    Human Resources
-                                </label>
+                        <div class="flex">
+                            <div id="form-name-email">
+                                    <label for="name">
+                                        Full name:
+                                    </label>
+                                    <input type="text" name="name" id="name" placeholder="Full name" required>
+                                    <label for="email">
+                                        Email:
+                                    </label>
+                                    <input type="email" name="email" id="email" placeholder="Email" required>
                             </div>
-                            <div class="input-radio">
-                                <input type="radio" id="systems" name="contact-area" value="systems">
-                                <label for="systems">
-                                    Systems
-                                </label>
-                            </div>
-                            <div class="input-radio">
-                                <input type="radio" id="marketing" name="contact-area" value="marketing">
-                                <label for="marketing">
-                                    Marketing
-                                </label>
+                            <div id="contact-area">
+                                <p>
+                                    Contact area:
+                                </p>
+                                <div class="input-radio">
+                                    <input type="radio" id="human-resources" name="contact-area" value="human-resources">
+                                    <label for="human-resources">
+                                        Human Resources
+                                    </label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="systems" name="contact-area" value="systems">
+                                    <label for="systems">
+                                        Systems
+                                    </label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="marketing" name="contact-area" value="marketing">
+                                    <label for="marketing">
+                                        Marketing
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -274,8 +284,10 @@
                             </label>
                             <textarea name="message" id="message" cols="100" rows="10" placeholder="Message"></textarea>
                         </div>
-                        <input type="reset" value="Reset" class="button-form">
-                        <input type="submit" value="Send" class="button-form btn-send">
+                        <div>
+                            <input type="reset" value="Reset" class="button-form">
+                            <input type="submit" value="Send" class="button-form btn-send">
+                        </div>
                     </form>
                 </section>
                 <section id="our-history">

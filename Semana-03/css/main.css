@@ -69,9 +69,21 @@ section#features h2 {
 
 section#features article {
     flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    margin: 10px auto;
+    width: 45%;
+    margin: 10px 5px;
+}
+
+section#features article:nth-child(even) {
+    padding-left: 20px;
+    border-left: #37386730 1px solid;
+}
+
+section#features article span {
+    display: block;
+}
+
+section#features article img {
+    width: 100%;
 }
 
 section#features h3 {
@@ -80,29 +92,24 @@ section#features h3 {
 }
 
 /* Get some info */
-section#contact-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 section#contact-form form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
 }
 
 #form-name-email {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex: auto;
 }
 
 #contact-area {
-    flex: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
+}
+
+#contact-area label {
+    display: block;
 }
 
 #contact-area label, #contact-area input {
@@ -157,15 +164,11 @@ section#our-history {
 }
 
 section#our-history div {
-    display: flex;
-    flex-wrap: wrap;
     flex: auto;
     margin-top: 10px;
 }
 
 section#our-history span.wrap-img {
-    display: block;
-    max-width: 40%;
     margin: 0px 5px 5px 5px;
     float: left;
 }
