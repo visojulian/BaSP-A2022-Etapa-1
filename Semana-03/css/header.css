@@ -47,3 +47,20 @@ header .social-media-icons {
         margin-left: -35px;
     }
 }
+
+@media (min-width: 1024px) {
+    header div + div {
+        align-self: flex-end;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    header .social-media-icons {
+        margin: 0px;
+        font-size: 29px;
+    }
+
+    .sticky-menu {
+        display: none;
+    }
+}
