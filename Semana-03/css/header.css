@@ -27,3 +27,23 @@ header .social-media-icons {
     text-decoration: none;
     color: #FF3E1D;
 }
+
+@media (min-width: 481px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header div + div {
+        margin-top: 50px;
+    }
+
+    header .social-media-icons {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .sticky-menu {
+        margin-left: -35px;
+    }
+}

@@ -37,3 +37,23 @@ footer p {
     margin: 30px 0px;
     border-top: 2px solid #37386770;
 }
+
+@media (min-width: 481px) {
+    footer {
+        justify-content: center;
+    }
+
+    footer div {
+        width: 28%;
+        margin-left: 5%;
+    }
+
+    #footer-icons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #footer-icons a {
+        margin: 0px 10px;
+    }
+}

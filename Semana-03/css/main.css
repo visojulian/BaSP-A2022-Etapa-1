@@ -68,10 +68,6 @@ section#features article {
     margin: 10px 0px;
 }
 
-/* section#features article:nth-child(even) {
-    padding-left: 20px;
-    border-left: #37386730 1px solid;
-} */
 section#features article span {
     display: block;
     flex: auto;
@@ -128,7 +124,6 @@ section#contact-form form {
 
 .button-form {
     width: 70px;
-    margin-left: 10px;
     margin-bottom: initial;
     background-color: #FF3E1D99;
     border: 1px solid #373867;
@@ -144,6 +139,7 @@ section#contact-form form {
 
 .btn-send {
     width: 110px;
+    margin-left: 10px;
     background-color: #AACE9B;
 }
 
@@ -163,15 +159,53 @@ section#our-history div {
     margin-top: 10px;
 }
 
-/* section#our-history span.wrap-img {
-    margin: 0px 5px 5px 5px;
-    float: left;
-}
-
-section#our-history p + p span.wrap-img {
-    margin: 5px 0px 5px 5px;
-    float: right;
-} */
 section#our-history img {
     width: 100%;
+}
+
+@media (min-width: 481px) {
+    #main-title {
+        flex-direction: row;
+    }
+
+    #main-title div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #main-title > span {
+        width: 50%;
+    }
+
+    section#reasons article {
+        width: 45%;
+        margin-right: 20px;
+    }
+
+    section#features article {
+        width: 45%;
+    }
+
+    section#features article:nth-child(even) {
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: #37386730 1px solid;
+    }
+
+    #contact-area {
+        width: 50%;
+        padding-left: 8%;
+    }
+
+    section#our-history span.wrap-img {
+        width: 47%;
+        margin: 0px 35px 15px 5px;
+        float: left;
+    }
+
+    section#our-history p + p span.wrap-img {
+        margin: 15px 0px 5px 15px;
+        float: right;
+    }
 }

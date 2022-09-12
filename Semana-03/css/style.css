@@ -149,12 +149,14 @@ textarea {
 }
 
 .button {
+    width: fit-content;
     margin-top: 20px;
     padding: 8px 30px;
     background-color: #fff;
     border: 1px solid #FF3E1D;
     border-radius: 5px;
     font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     color: #FF3E1D;
 }
@@ -167,4 +169,14 @@ textarea {
 .flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (min-width: 481px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    label {
+        display: block;
+    }
 }
