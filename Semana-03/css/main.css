@@ -209,3 +209,9 @@ section#our-history img {
         float: right;
     }
 }
+
+@media (min-width: 1024px) {
+    #main-container {
+        width: 72%;
+    }
+}

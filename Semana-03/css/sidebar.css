@@ -1,14 +1,11 @@
 aside {
     display: none;
-    position: fixed;
-    width: 17%;
-    height: 100%;
-    padding: 30px;
+    width: 25%;
     background-color: #AACE9B;
 }
 
 nav {
-    padding: 65px 0px;
+    padding: 45px 0px;
     border-bottom: 1px solid #37386785;
 }
 
@@ -26,15 +23,29 @@ nav a {
     color: #373867;
 }
 
+.aside-container {
+    position: fixed;
+    top: 0;
+    padding: 30px;
+    width: 20%;
+}
+
+p.aside-title {
+    display: inline-block;
+    border-bottom: 2px solid #FF3E1D;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 #aside-contact {
     padding-top: 65px;
 }
 
-#aside-contact h2 {
+#aside-contact .aside-title {
     margin-bottom: 25px;
 }
 
-#aside-contact p {
+#aside-contact p + p {
     margin-bottom: 35px;
     font-size: 14px;
     font-weight: 500;
@@ -69,4 +80,11 @@ nav a {
     display: inline;
     margin: 0px 10px;
     font-size: 20px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    aside {
+        display: block;
+    }
 }

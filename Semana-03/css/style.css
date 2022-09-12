@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    align-items: stretch;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 15px;
     color: #373867;
@@ -98,6 +100,7 @@ textarea {
     flex-wrap: wrap;
 }
 
+/* > Mobile */
 @media (min-width: 481px) {
     h1 {
         font-size: 40px;
