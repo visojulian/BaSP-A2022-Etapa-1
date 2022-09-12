@@ -49,6 +49,7 @@ section#reasons article {
 }
 
 section#reasons img {
+    align-self: center;
     width: 132px;
     margin-right: 20px;
 }
@@ -213,5 +214,9 @@ section#our-history img {
 @media (min-width: 1024px) {
     #main-container {
         width: 72%;
+    }
+
+    section#our-history span.wrap-img {
+        max-width: 400px;
     }
 }
