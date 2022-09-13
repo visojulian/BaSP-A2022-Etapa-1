@@ -214,9 +214,35 @@ section#our-history img {
 @media (min-width: 1024px) {
     #main-container {
         width: 72%;
+        margin: 1%;
     }
 
     section#our-history span.wrap-img {
         max-width: 400px;
+    }
+
+    p.subheader {
+        font-size: 20px;
+    }
+
+    p.subheader + p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    section#features img {
+        max-width: 474px;
+    }
+
+    section#our-history p {
+        font-size: 16px;
+    }
+
+    section#our-history span.wrap-img {
+        margin: 0;
+    }
+
+    section#our-history img {
+        max-width: 380px;
     }
 }
