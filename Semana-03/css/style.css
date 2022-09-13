@@ -99,7 +99,7 @@ textarea {
     flex-wrap: wrap;
 }
 
-/* > Mobile */
+/* Tablet */
 @media (min-width: 481px) {
     h1 {
         font-size: 40px;

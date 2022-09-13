@@ -164,6 +164,7 @@ section#our-history img {
     width: 100%;
 }
 
+/* Tablet */
 @media (min-width: 481px) {
     #main-title {
         flex-direction: row;
@@ -211,6 +212,7 @@ section#our-history img {
     }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
     #main-container {
         width: 72%;

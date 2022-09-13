@@ -38,6 +38,7 @@ footer p {
     border-top: 2px solid #37386770;
 }
 
+/* Tablet */
 @media (min-width: 481px) {
     footer {
         justify-content: center;

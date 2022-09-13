@@ -28,6 +28,7 @@ header .social-media-icons {
     color: #FF3E1D;
 }
 
+/* Tablet */
 @media (min-width: 481px) {
     header {
         display: flex;
@@ -48,6 +49,7 @@ header .social-media-icons {
     }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
     header div + div {
         align-self: flex-end;
