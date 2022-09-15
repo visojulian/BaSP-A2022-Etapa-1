@@ -57,5 +57,28 @@ Deploy in GitHub Pages
 [Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html)
 
 ---
+### Week 04 - Javascript
+New folder: Semana-04, execercises
+
+Create docs:
+
+    index.html
+    01_variables_and_operators.js
+    02_strings.js
+    03_arrays.js
+    04_if_else.js
+    05_for.js
+    06_functions.js
+
+
+Solving Javascript problems for study porpuse
+
+Also fixing Flexbox task
+
+[See this week work](Semana-04/index.html)
+
+[Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
+
+---
 
 [_By Julian Viso_](https://github.com/visojulian)
