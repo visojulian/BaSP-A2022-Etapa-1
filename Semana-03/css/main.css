@@ -46,6 +46,8 @@ section#reasons > div {
 
 section#reasons article {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 section#reasons img {
@@ -181,6 +183,7 @@ section#our-history img {
     }
 
     section#reasons article {
+        flex-wrap: nowrap;
         width: 45%;
         margin-right: 20px;
     }
