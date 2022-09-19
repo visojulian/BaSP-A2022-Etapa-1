@@ -4,7 +4,7 @@ console.log('--EXERCISE 3: ARRAYS');
 
 console.log('-Exercise 3.a:');
 var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-console.log(months[5], months[11]);
+console.log(months[4], months[10]);
 
 // Make a copy for exercise 3.g
 var monthsCopy = months.slice(0);
