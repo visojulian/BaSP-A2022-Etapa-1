@@ -1,6 +1,21 @@
 /* Login */
+a {
+    text-decoration: none;
+    color: #373867;
+}
+
+a:hover {
+    color: #4c4d8a;
+}
+
 label {
     display: block;
+}
+
+form p {
+    display: none;
+    margin-bottom: 10px;
+    color: #FF3E1D;
 }
 
 section#login {
@@ -14,14 +29,45 @@ section#login input {
 }
 
 section#login input.btn-login {
+    margin: 0px;
     width: 30%;
-    align-self: flex-end;
     border-radius: 5px;
     color: #ffffff;
     background-color: #373867;
 }
 
+section#login input.btn-login:hover{
+    background-color: #4c4d8a;
+}
+
 section#login form {
     display: flex;
     flex-direction: column;
+}
+
+section#login li {
+    margin-bottom: 5px
+}
+
+.input-alert {
+    border-color: #FF3E1D;
+}
+
+.input-valid {
+    border-color: #AACE9B;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.disabled {
+    color: #6e6e6e;
+}
+
+.disabled:hover {
+    color: #6e6e6e;
 }
