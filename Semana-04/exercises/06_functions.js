@@ -24,10 +24,13 @@ console.log(result);
 
 // c. Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva verdadero si es un número entero.
 
+console.log('-Exercise 6.c:');
 function validateInteger(num) {
     if (Math.round(num) === num) {
+        console.log('Is integer');
         return true;
     }
+    console.log('Not integer');
     return false;
 }
 
