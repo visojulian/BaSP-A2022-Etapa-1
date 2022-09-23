@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 15px;
+    color: #373867;
+}
+
+section {
+    flex: auto;
+    margin-top: 35px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #37386770;
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+h2 {
+    display: inline-block;
+    border-bottom: 2px solid #FF3E1D;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 10px 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+article {
+    display: flex;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+form {
+    margin-top: 20px;
+    font: normal 14px 'Roboto';
+}
+
+label {
+    display: none;
+}
+
+input, textarea {
+    width: 96%;
+    margin: 10px 0px;
+    padding: 8px;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    margin-bottom: 15px;
+}
+
+/* Global classes */
+.text-bold {
+    font-weight: bold;
+}
+
+.social-media-icons {
+    font-size: 29px;
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: #5D5D5D;
+}
+
+.social-media-icons a:hover {
+    color: #FF3E1D;
+}
+
+.button {
+    width: fit-content;
+    margin-top: 20px;
+    padding: 8px 30px;
+    background-color: #fff;
+    border: 1px solid #FF3E1D;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FF3E1D;
+}
+
+.button:hover {
+    background-color: #FF3E1D;
+    color: #373867;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    label {
+        display: block;
+    }
+}

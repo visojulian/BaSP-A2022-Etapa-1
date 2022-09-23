@@ -1,0 +1,68 @@
+header {
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 3px solid #FF3E1D;
+}
+
+header div {
+    margin-bottom: 20px;
+}
+
+header .social-media-icons {
+    display: block;
+    margin-bottom: 30px;
+    text-align: end;
+    font-size: 20px;
+}
+
+.sticky-menu {
+    position: fixed;
+    margin-top: -15px;
+    padding: 15px 20px;
+    background-color: #37386730;
+    border-radius: 5px;
+}
+
+.sticky-menu a {
+    text-decoration: none;
+    color: #FF3E1D;
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header div + div {
+        margin-top: 50px;
+    }
+
+    header .social-media-icons {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .sticky-menu {
+        margin-left: -35px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header div + div {
+        align-self: flex-end;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    header .social-media-icons {
+        margin: 0px;
+        font-size: 29px;
+    }
+
+    .sticky-menu {
+        display: none;
+    }
+}

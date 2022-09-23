@@ -1,0 +1,27 @@
+/* Login */
+label {
+    display: block;
+}
+
+section#login {
+    border: 0px;
+    padding: 0 10%;
+}
+
+section#login input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section#login input.btn-login {
+    width: 30%;
+    align-self: flex-end;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #373867;
+}
+
+section#login form {
+    display: flex;
+    flex-direction: column;
+}

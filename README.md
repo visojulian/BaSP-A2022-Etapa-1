@@ -80,5 +80,28 @@ Also fixing Flexbox task
 [Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
 
 ---
+### Week 06 - JSDOM
+New folder: Semana-06 - views - javascript
+
+Create docs:
+
+    login.html
+    sign-up.html
+    login.css
+    sign-up.css
+    login.js
+    sign-up.js
+    index.js
+
+
+Use JSDOM to create active forms: contact, login and sign-up
+
+Keep using Flexbox
+
+[See this week work](Semana-06/views/index.html)
+
+[Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html)
+
+---
 
 [_By Julian Viso_](https://github.com/visojulian)
