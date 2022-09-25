@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A job hours tracker" />
     <meta
       name="keywords"
@@ -17,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="../css/footer.css" />
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script src="../javascript/login.js"></script>
     <title>
       Trackgenix - Hours Tracker
     </title>
@@ -31,7 +33,7 @@
           <nav>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="./index.html">Home</a>
               </li>
               <li>
                 <a href="#">Sign Up</a>
@@ -118,16 +120,19 @@
           <form>
             <label for="email">Email</label>
             <input type="text" name="email" id="email" />
-            <p>Wrong email. Please input again.</p>
             <label for="pass">Password</label>
             <input type="password" name="pass" id="pass" />
-            <p>Wrong password. Please input again.</p>
             <div class="form-actions">
               <ul>
                 <li><a href="#" class="disabled">Forgot password?</a></li>
                 <li><a href="#">Sign Up</a></li>
               </ul>
-              <input type="button" value="Login" class="btn-login" />
+              <input
+                type="button"
+                value="Login"
+                class="btn-login"
+                id="btn-login"
+              />
             </div>
           </form>
         </section>
