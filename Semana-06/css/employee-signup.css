@@ -1,0 +1,38 @@
+/* Employee sign up */
+#employee-signup {
+    border: 0px;
+    padding: 0 5%;
+}
+
+#employee-signup p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#employee-signup form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#employee-signup fieldset {
+    width: 100%;
+}
+
+#employee-signup input.btn-create {
+    margin: 0px;
+    width: 30%;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #373867;
+}
+
+#employee-signup input.btn-create:hover {
+    background-color: #4c4d8a;
+}
+
+@media (min-width:481px) {
+    #employee-signup fieldset {
+        width: 45%;
+    }
+}

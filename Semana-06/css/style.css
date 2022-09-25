@@ -58,6 +58,24 @@ textarea {
     margin-bottom: 15px;
 }
 
+a {
+    text-decoration: none;
+    color: #373867;
+}
+
+a:hover {
+    color: #4c4d8a;
+}
+
+label {
+    display: block;
+}
+
+form p {
+    margin-bottom: 10px;
+    color: #FF3E1D;
+}
+
 /* Global classes */
 .text-bold {
     font-weight: bold;
@@ -97,6 +115,30 @@ textarea {
 .flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+.input-alert {
+    border-color: #FF3E1D;
+}
+
+.input-valid {
+    border-color: #AACE9B;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.disabled {
+    color: #6e6e6e;
+}
+
+.disabled:hover {
+    color: #6e6e6e;
 }
 
 /* Tablet */
