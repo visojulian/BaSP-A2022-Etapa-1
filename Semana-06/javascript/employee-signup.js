@@ -24,6 +24,114 @@ window.onload = function () {
         removes(lName);
     }
 
+    // Validate DNI
+    var dni = document.getElementById('dni');
+    var pDni = document.createElement('p');
+    dni.onblur = function () {
+        if (NaN !== isNaN(dni.value) && dni.value !== '') {
+            if (dni.value.length == 8 && dni.value > 999999) {
+                dni.classList.add('input-valid');
+            } else {
+                dni.classList.add('input-alert');
+                pDni.innerHTML = 'Please check your DNI number. Must be greather than 999.999.';
+                dni.parentElement.appendChild(pDni);
+            }
+        }
+    }
+
+    // Modify dni
+    dni.onfocus = function () {
+        removes(dni);
+    }
+
+    // Validate birthday
+    var date = document.querySelector('input#date');
+    var pDate = document.createElement('p');
+
+    date.onblur = function () {
+        if (date.value !== '') {
+            var year = date.value.split('-')[0];
+            if (year > 1922 && year < 2004) {
+                date.classList.add('input-valid');
+            } else {
+                date.classList.add('input-alert');
+                pDate.innerHTML = 'You muste be +18 for register.';
+                date.parentElement.appendChild(pDate);
+            }
+        }
+    }
+
+    // Modify date
+    date.onfocus = function () {
+        removes(date);
+    }
+
+    // Validate phone
+    var phone = document.getElementById('phone');
+    var pPhone = document.createElement('p');
+    phone.onblur = function () {
+        if (phone.value !== '') {
+            if (phone.value.length == 10) {
+                phone.classList.add('input-valid');
+            } else {
+                phone.classList.add('input-alert');
+                pPhone.innerHTML = 'Please input a valid phone. Only numbers.';
+                phone.parentElement.appendChild(pPhone);
+            }
+        }
+    }
+
+    // Modify phone
+    phone.onfocus = function () {
+        removes(phone);
+    }
+
+    // Validate address
+    var address = document.querySelector('input#address');
+    var pAddress = document.createElement('p');
+    address.onblur = function () {
+        addressAndLocation(address, pAddress);
+    }
+
+    // Modify address
+    address.onfocus = function () {
+        removes(address);
+    }
+
+    // Validate location
+    var location = document.querySelector('input#location');
+    var pLocation = document.createElement('p');
+    location.onblur = function () {
+        addressAndLocation(location, pLocation);
+    }
+
+    // Modify location
+    location.onfocus = function () {
+        removes(location);
+    }
+
+    // Validate postal code
+    var postal = document.querySelector('input#postal');
+    var pPostal = document.createElement('p');
+    postal.onblur = function () {
+        if (postal.value != '') {
+            if (postal.value.length > 3 && postal.value.length < 6
+                && Number(postal.value) !== isNaN(postal.value)) {
+                postal.classList.add('input-valid');
+            } else {
+                postal.classList.add('input-alert');
+                pPostal.innerHTML = 'Invalid postal code.';
+                postal.parentElement.appendChild(pPostal);
+            }
+        }
+    }
+
+    // Modify postal code
+    postal.onfocus = function () {
+        removes(postal);
+    }
+
+
     // Validate emailInput
     var emailInput = document.getElementById('email');
     var pEmail = document.createElement('p');
@@ -42,7 +150,7 @@ window.onload = function () {
 
     // Modify email
     emailInput.onfocus = function () {
-        removes(emailInput)
+        removes(emailInput);
     }
 
     // Validate password
@@ -58,9 +166,9 @@ window.onload = function () {
         var upperCase = 0;
         var lowerCase = 0;
         var number = 0;
-
+        var char = '';
         for (var index = 0; index < passInput.value.length; index++) {
-            var char = passInput.value.charAt(index);
+            char = passInput.value.charAt(index);
             if (char.toUpperCase() !== char.toLowerCase()) {
                 if (char === char.toUpperCase()) {
                     upperCase++;
@@ -118,6 +226,11 @@ window.onload = function () {
         removes(repPassInput);
     }
 
+    // Create button
+    var btnCreate = document.querySelector('input#btn-create');
+    btnCreate.onclick = function () {
+
+    }
 
     // Global functions
     var names = function (input, pInput) {
@@ -142,6 +255,39 @@ window.onload = function () {
             input.parentElement.appendChild(pInput);
         }
 
+    }
+
+    var addressAndLocation = function (input, pInput) {
+        var char = '';
+        var num = 0;
+        var letter = 0;
+        for (var i = 0; i < input.value.length; i++) {
+            char = input.value.charAt(i)
+            if (char.toLowerCase() === char.toUpperCase() && char !== ' ') {
+                if (isNaN(Number(char))) {
+                    input.classList.add('input-alert');
+                    pInput.innerHTML = 'Please input a valid char.';
+                    input.parentElement.appendChild(pInput);
+                }
+            } else if (input.value.substring(0, 1) === ' ') {
+                input.classList.add('input-alert');
+                pInput.innerHTML = 'Can`t begin with whitespaces.';
+                input.parentElement.appendChild(pInput);
+            } else {
+                if (isNaN(Number(char))) {
+                    letter++;
+                } else {
+                    num++;
+                }
+            }
+        }
+        if (letter > 2 && num > 0) {
+            input.classList.add('input-valid');
+        } else if (!input.classList.contains('input-alert')) {
+            input.classList.add('input-alert');
+            pInput.innerHTML = 'Please input at least 3 letters, 1 number and 1 whitespace.';
+            input.parentElement.appendChild(pInput);
+        }
     }
 
     var removes = function (elem) {
