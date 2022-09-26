@@ -1,7 +1,7 @@
 window.onload = function () {
 
     // Global Variables
-    var btnLogin = document.getElementById('btn-login')
+    var btnLogin = document.getElementById('btn-login');
     var emailInput = document.getElementById('email');
     var pEmail = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;

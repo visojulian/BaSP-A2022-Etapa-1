@@ -4,7 +4,7 @@
     padding: 0 5%;
 }
 
-#employee-signup p {
+#employee-signup > p {
     margin-top: 10px;
     font-weight: bold;
 }
@@ -31,7 +31,7 @@
     background-color: #4c4d8a;
 }
 
-@media (min-width:481px) {
+@media (min-width:1024px) {
     #employee-signup fieldset {
         width: 45%;
     }
