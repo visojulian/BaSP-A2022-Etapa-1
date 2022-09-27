@@ -116,7 +116,7 @@ window.onload = function () {
     postal.onblur = function () {
         if (postal.value != '') {
             if (postal.value.length > 3 && postal.value.length < 6
-                && Number(postal.value) !== isNaN(postal.value)) {
+                && !isNaN(postal.value)) {
                 postal.classList.add('input-valid');
             } else {
                 postal.classList.add('input-alert');
@@ -202,34 +202,63 @@ window.onload = function () {
     }
 
     // Validate repeat password
-    var repPassInput = document.getElementById('pass-repeat');
+    var repPass = document.getElementById('pass-repeat');
     var pRepPass = document.createElement('p');
-    repPassInput.onblur = function () {
+    repPass.onblur = function () {
         if (passInput.classList.contains('input-valid') &&
-            repPassInput.value !== '') {
-            if (repPassInput.value === passInput.value) {
-                repPassInput.classList.add('input-valid');
+            repPass.value !== '') {
+            if (repPass.value === passInput.value) {
+                repPass.classList.add('input-valid');
             } else {
-                repPassInput.classList.add('input-alert');
+                repPass.classList.add('input-alert');
                 pRepPass.innerHTML = 'Please repeat the same password from previous field.';
-                repPassInput.parentElement.insertBefore(pRepPass, repPassInput.nextElementSibling);
+                repPass.parentElement.insertBefore(pRepPass, repPass.nextElementSibling);
             }
-        } else if (repPassInput.value !== '') {
-            repPassInput.classList.add('input-alert');
+        } else if (repPass.value !== '') {
+            repPass.classList.add('input-alert');
             pRepPass.innerHTML = 'Invalid password. Refill password field.';
-            repPassInput.parentElement.insertBefore(pRepPass, repPassInput.nextElementSibling);
+            repPass.parentElement.insertBefore(pRepPass, repPass.nextElementSibling);
         }
     }
 
     // Modify repeat password
-    repPassInput.onfocus = function () {
-        removes(repPassInput);
+    repPass.onfocus = function () {
+        removes(repPass);
     }
 
     // Create button
-    var btnCreate = document.querySelector('input#btn-create');
-    btnCreate.onclick = function () {
+    var btnCreate = document.querySelector('#btn-create');
+    var inputs = [fName, lName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
+    btnCreate.onclick = function (e) {
+        e.preventDefault();
+        var valids = 0;
+        var errors = [];
+        var alertMsg = '';
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].classList.contains('input-valid')) {
+                valids++;
+            } else if (inputs[i].classList.contains('input-alert')) {
+                errors.push(inputs[i].nextElementSibling);
+            }
+        }
+        if (valids == inputs.length) {
+            alertMsg = 'Welcome to Trackgenix:\n';
+            for (var i = 0; i < inputs.length; i++) {
+                alertMsg += inputs[i].value + '\n';
+            }
 
+        } else if (errors.length == 0) {
+            alertMsg = 'Please check the form. All fields are required.';
+        } else {
+            alertMsg = 'There are some inputs errors:\n';
+            if (errors.length + valids !== inputs.length) {
+                alertMsg += 'Remember complete all fields.\n'
+            }
+            for (var i = 0; i < errors.length; i++) {
+                alertMsg += errors[i].innerHTML + '\n';
+            }
+        }
+        alert(alertMsg);
     }
 
     // Global functions
