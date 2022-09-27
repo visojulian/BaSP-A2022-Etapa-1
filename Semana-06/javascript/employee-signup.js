@@ -300,9 +300,9 @@ window.onload = function () {
                     pInput.innerHTML = 'Please input a valid char.';
                     input.parentElement.appendChild(pInput);
                 }
-            } else if (input.value.substring(0, 1) === ' ') {
+            } else if (input.value.substring(0, 1) === ' ' || input.value.substring(input.value.length - 1) === ' ') {
                 input.classList.add('input-alert');
-                pInput.innerHTML = 'Can`t begin with whitespaces.';
+                pInput.innerHTML = 'Can`t begin or end with whitespaces.';
                 input.parentElement.appendChild(pInput);
             } else {
                 if (isNaN(char)) {

@@ -199,7 +199,7 @@ section#our-history img {
 
     #contact-area {
         width: 50%;
-        padding-left: 8%;
+        padding: 5px 0;
     }
 
     section#our-history span.wrap-img {

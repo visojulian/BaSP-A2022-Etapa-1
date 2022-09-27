@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" type="text/css" href="../css/footer.css">
         <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+        <script src="../javascript/contact.js"></script>
         <title>
             Trackgenix - Hours Tracker
         </title>
@@ -252,50 +253,38 @@
                         Get some info
                     </h2>
                     <form>
-                        <div class="flex">
                             <div id="form-name-email">
+                                <fieldset>
                                     <label for="name">
                                         Full name:
                                     </label>
-                                    <input type="text" name="name" id="name" placeholder="Full name" required>
+                                    <input type="text" name="name" id="name" placeholder="Full name">
+                                </fieldset>
+                                <fieldset>
                                     <label for="email">
                                         Email:
                                     </label>
-                                    <input type="email" name="email" id="email" placeholder="Email" required>
+                                    <input type="text" name="email" id="email" placeholder="Email">
+                                </fieldset>
                             </div>
                             <div id="contact-area">
-                                <p>
-                                    Contact area:
-                                </p>
-                                <div class="input-radio">
-                                    <input type="radio" id="human-resources" name="contact-area" value="human-resources">
-                                    <label for="human-resources">
-                                        Human Resources
-                                    </label>
-                                </div>
-                                <div class="input-radio">
-                                    <input type="radio" id="systems" name="contact-area" value="systems">
-                                    <label for="systems">
-                                        Systems
-                                    </label>
-                                </div>
-                                <div class="input-radio">
-                                    <input type="radio" id="marketing" name="contact-area" value="marketing">
-                                    <label for="marketing">
-                                        Marketing
-                                    </label>
-                                </div>
+                                <label for="select-area">Contact area:</label>
+                                    <select id="select-area" name="contact-area">
+                                        <option value="" disabled selected>Select an area:</option>
+                                        <option value="hhrr">Human Resources</option>
+                                        <option value="sys">Systems</option>
+                                        <option value="mkt">Marketing</option>
+                                    </select>
                             </div>
-                        </div>
-                        <div>
+                        <fieldset>
                             <label for="message">
                                 Message:
                             </label>
                             <textarea name="message" id="message" cols="100" rows="10" placeholder="Message"></textarea>
-                        </div>
+                        </fieldset>
                         <div>
                             <input type="reset" value="Reset" class="button-form">
-                            <input type="submit" value="Send" class="button-form btn-send">
+                            <input type="submit" value="Send" class="button-form btn-send" id="submit">
                         </div>
                     </form>
                 </section>

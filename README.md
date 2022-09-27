@@ -91,7 +91,7 @@ Create docs:
     employee-signup.css
     login.js
     employeesignup.js
-    index.js
+    contact.js
 
 
 Use JSDOM to create active forms: contact, login and sign-up
