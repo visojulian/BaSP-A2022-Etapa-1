@@ -86,11 +86,11 @@ New folder: Semana-06 - views - javascript
 Create docs:
 
     login.html
-    sign-up.html
+    employee-signup.html
     login.css
-    sign-up.css
+    employee-signup.css
     login.js
-    sign-up.js
+    employeesignup.js
     index.js
 
 

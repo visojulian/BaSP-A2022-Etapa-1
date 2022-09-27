@@ -55,7 +55,7 @@ window.onload = function () {
                 date.classList.add('input-valid');
             } else {
                 date.classList.add('input-alert');
-                pDate.innerHTML = 'You muste be +18 for register.';
+                pDate.innerHTML = 'You must be +18 for register.';
                 date.parentElement.appendChild(pDate);
             }
         }
@@ -244,6 +244,7 @@ window.onload = function () {
         if (valids == inputs.length) {
             alertMsg = 'Welcome to Trackgenix:\n';
             for (var i = 0; i < inputs.length; i++) {
+                alertMsg += inputs[i].previousElementSibling.innerHTML + ': ';
                 alertMsg += inputs[i].value + '\n';
             }
 
@@ -255,6 +256,7 @@ window.onload = function () {
                 alertMsg += 'Remember complete all fields.\n'
             }
             for (var i = 0; i < errors.length; i++) {
+                alertMsg += inputs[i].previousElementSibling.innerHTML + ': ';
                 alertMsg += errors[i].innerHTML + '\n';
             }
         }
