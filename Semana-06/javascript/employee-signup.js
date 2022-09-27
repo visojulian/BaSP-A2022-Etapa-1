@@ -293,7 +293,7 @@ window.onload = function () {
         for (var i = 0; i < input.value.length; i++) {
             char = input.value.charAt(i)
             if (char.toLowerCase() === char.toUpperCase() && char !== ' ') {
-                if (isNaN(Number(char))) {
+                if (isNaN(char)) {
                     input.classList.add('input-alert');
                     pInput.innerHTML = 'Please input a valid char.';
                     input.parentElement.appendChild(pInput);
@@ -303,19 +303,29 @@ window.onload = function () {
                 pInput.innerHTML = 'Can`t begin with whitespaces.';
                 input.parentElement.appendChild(pInput);
             } else {
-                if (isNaN(Number(char))) {
+                if (isNaN(char)) {
                     letter++;
                 } else {
                     num++;
                 }
             }
         }
-        if (letter > 2 && num > 0) {
-            input.classList.add('input-valid');
-        } else if (!input.classList.contains('input-alert')) {
-            input.classList.add('input-alert');
-            pInput.innerHTML = 'Please input at least 3 letters, 1 number and 1 whitespace.';
-            input.parentElement.appendChild(pInput);
+        if (input == address) {
+            if (letter > 2 && num > 0) {
+                input.classList.add('input-valid');
+            } else if (!input.classList.contains('input-alert')) {
+                input.classList.add('input-alert');
+                pInput.innerHTML = 'Please input at least 3 letters, 1 number and 1 whitespace.';
+                input.parentElement.appendChild(pInput);
+            }
+        } else {
+            if (letter > 2) {
+                input.classList.add('input-valid');
+            } else if (!input.classList.contains('input-alert')) {
+                input.classList.add('input-alert');
+                pInput.innerHTML = 'Please input at least 3 letters.';
+                input.parentElement.appendChild(pInput);
+            }
         }
     }
 
