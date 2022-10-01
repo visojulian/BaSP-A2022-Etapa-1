@@ -242,14 +242,11 @@ window.onload = function () {
             }
         }
         if (valids == inputs.length) {
-            alertMsg = 'Welcome to Trackgenix:\n';
-            for (var i = 0; i < inputs.length; i++) {
-                alertMsg += inputs[i].previousElementSibling.innerHTML + ': ';
-                alertMsg += inputs[i].value + '\n';
-            }
+            runRequest();
 
         } else if (errors.length == 0) {
             alertMsg = 'Please check the form. All fields are required.';
+            alert(alertMsg);
         } else {
             alertMsg = 'There are some inputs errors:\n';
             if (errors.length + valids !== inputs.length) {
@@ -259,8 +256,9 @@ window.onload = function () {
                 alertMsg += inputs[i].previousElementSibling.innerHTML + ': ';
                 alertMsg += errors[i].innerHTML + '\n';
             }
+            alert(alertMsg);
         }
-        alert(alertMsg);
+
     }
 
     // Global functions
@@ -336,5 +334,39 @@ window.onload = function () {
         if (elem.nextElementSibling) {
             elem.parentElement.removeChild(elem.nextElementSibling);
         }
+    }
+
+    // Fetch server
+    var runRequest = function () {
+        var query = 'name=' + fName.value
+            + '&lastName=' + lName.value
+            + '&dni=' + dni.value
+            + '&dob=' + date.value
+            + '&phone=' + phone.value
+            + '&address=' + address.value
+            + '&city=' + location.value
+            + '&zip=' + postal.value
+            + '&email=' + emailInput.value
+            + '&password=' + passInput.value;
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?' + query;
+        fetch(url)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                if (data.success) {
+                    alert('Request successful:\n' + data.msg);
+                } else {
+                    var alertErrors = '';
+                    for (var i = 0; i < data.errors.length; i++) {
+                        alertErrors += data.errors[i].msg + '\n';
+                    }
+                    alert('Signup error:\n' + alertErrors);
+                    console.log('Signup error:\n' + alertErrors);
+                }
+            })
+            .catch(function (error) {
+                alert('Error:\n' + error);
+            })
     }
 }
