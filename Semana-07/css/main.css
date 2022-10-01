@@ -1,0 +1,252 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Main title */
+#main-title {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#main-title div {
+    width: 100%;
+}
+
+#main-title > span {
+    display: block;
+    flex: 0 0 auto;
+    max-height: 375px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#main-title img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.subheader {
+    margin: 20px 0px;
+    font-size: 17px;
+}
+
+/* Why you should use me */
+section#reasons > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#reasons article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section#reasons img {
+    align-self: center;
+    width: 132px;
+    margin-right: 20px;
+}
+
+/* Features */
+section#features div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#features h2 {
+    margin-bottom: 10px;
+}
+
+section#features article {
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+section#features article span {
+    display: block;
+    flex: auto;
+}
+
+section#features article img {
+    width: 100%;
+}
+
+section#features h3 {
+    width: 100%;
+    margin: 25px 0px;
+}
+
+/* Get some info */
+section#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-name-email {
+    flex: auto;
+}
+
+#contact-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+#contact-area label {
+    display: block;
+}
+
+#contact-area label, #contact-area input {
+    flex: auto;
+    margin: 5px 0px;
+}
+
+#contact-area p {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#contact-area div.input-radio {
+    display: flex;
+}
+
+#contact-area input {
+    width: auto;
+    margin: 0px 5px;
+}
+
+.button-form {
+    width: 70px;
+    margin-bottom: initial;
+    background-color: #FF3E1D99;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #373867;
+}
+
+.button-form:hover {
+    background-color: #FF3E1D;
+}
+
+.btn-send {
+    width: 110px;
+    margin-left: 10px;
+    background-color: #AACE9B;
+}
+
+.btn-send:hover {
+    background-color: #4EB125;
+}
+
+/* Our history */
+section#our-history {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+}
+
+section#our-history div {
+    flex: auto;
+    margin-top: 10px;
+}
+
+section#our-history img {
+    width: 100%;
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    #main-title {
+        flex-direction: row;
+    }
+
+    #main-title div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #main-title > span {
+        width: 50%;
+    }
+
+    section#reasons article {
+        flex-wrap: nowrap;
+        width: 45%;
+        margin-right: 20px;
+    }
+
+    section#features article {
+        width: 45%;
+    }
+
+    section#features article:nth-child(even) {
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: #37386730 1px solid;
+    }
+
+    #contact-area {
+        width: 50%;
+        padding: 5px 0;
+    }
+
+    section#our-history span.wrap-img {
+        width: 47%;
+        margin: 0px 35px 15px 5px;
+        float: left;
+    }
+
+    section#our-history p + p span.wrap-img {
+        margin: 15px 0px 5px 15px;
+        float: right;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #main-container {
+        width: 72%;
+        margin: 1%;
+    }
+
+    section#our-history span.wrap-img {
+        max-width: 400px;
+    }
+
+    p.subheader {
+        font-size: 20px;
+    }
+
+    p.subheader + p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    section#features img {
+        max-width: 474px;
+    }
+
+    section#our-history p {
+        font-size: 16px;
+    }
+
+    section#our-history span.wrap-img {
+        margin: 0;
+    }
+
+    section#our-history img {
+        max-width: 380px;
+    }
+}
