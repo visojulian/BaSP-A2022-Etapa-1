@@ -336,12 +336,18 @@ window.onload = function () {
         }
     }
 
+    // Change date format
+    var formatDate = function (date) {
+        var array = date.split('-');
+        return array[1] + '/' + array[2] + '/' + array[0];
+    }
+
     // Fetch server
     var runRequest = function () {
         var query = 'name=' + fName.value
             + '&lastName=' + lName.value
             + '&dni=' + dni.value
-            + '&dob=' + date.value
+            + '&dob=' + formatDate(date.value)
             + '&phone=' + phone.value
             + '&address=' + address.value
             + '&city=' + location.value
@@ -362,11 +368,12 @@ window.onload = function () {
                         alertErrors += data.errors[i].msg + '\n';
                     }
                     alert('Signup error:\n' + alertErrors);
-                    console.log('Signup error:\n' + alertErrors);
                 }
             })
             .catch(function (error) {
                 alert('Error:\n' + error);
             })
     }
+
+
 }
