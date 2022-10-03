@@ -35,6 +35,10 @@ window.onload = function () {
                 dniAlert.innerHTML = 'Please check your DNI number. Must be greather than 999.999.';
                 dni.parentElement.appendChild(dniAlert);
             }
+        } else if (dni.value == '') {
+            dni.classList.add('input-alert');
+            dniAlert.innerHTML = 'Required field.';
+            dni.parentElement.insertBefore(dniAlert, dni.nextElementSibling);
         }
     }
 
@@ -57,6 +61,10 @@ window.onload = function () {
                 dateAlert.innerHTML = 'You must be +18 for register.';
                 date.parentElement.appendChild(dateAlert);
             }
+        } else if (date.value == '') {
+            date.classList.add('input-alert');
+            dateAlert.innerHTML = 'Required field.';
+            date.parentElement.insertBefore(dateAlert, date.nextElementSibling);
         }
     }
 
@@ -77,6 +85,10 @@ window.onload = function () {
                 phoneAlert.innerHTML = 'Please input a valid phone. Only numbers.';
                 phone.parentElement.appendChild(phoneAlert);
             }
+        } else if (phone.value == '') {
+            phone.classList.add('input-alert');
+            phoneAlert.innerHTML = 'Required field.';
+            phone.parentElement.insertBefore(phoneAlert, phone.nextElementSibling);
         }
     }
 
@@ -122,6 +134,10 @@ window.onload = function () {
                 postalAlert.innerHTML = 'Invalid postal code.';
                 postal.parentElement.appendChild(postalAlert);
             }
+        } else if (postal.value == '') {
+            postal.classList.add('input-alert');
+            postalAlert.innerHTML = 'Required field.';
+            postal.parentElement.insertBefore(postalAlert, postal.nextElementSibling);
         }
     }
 
@@ -144,6 +160,10 @@ window.onload = function () {
                 emailAlert.innerHTML = 'Invalid email input';
                 emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
             }
+        } else if (emailInput.value == '') {
+            emailInput.classList.add('input-alert');
+            emailAlert.innerHTML = 'Required field.';
+            emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
         }
     }
 
@@ -154,7 +174,7 @@ window.onload = function () {
 
     // Validate password
     var passInput = document.getElementById('pass');
-    var pPass = document.createElement('p');
+    var passAlert = document.createElement('p');
     passInput.onblur = function () {
         // Criteria: length > 7
         if (passInput.value.length > 7) {
@@ -189,9 +209,13 @@ window.onload = function () {
                 passInput.classList.add('input-valid');
             } else {
                 passInput.classList.add('input-alert');
-                pPass.innerHTML = 'Invalid password';
-                passInput.parentElement.insertBefore(pPass, passInput.nextElementSibling);
+                passAlert.innerHTML = 'Invalid password';
+                passInput.parentElement.insertBefore(passAlert, passInput.nextElementSibling);
             }
+        } else if (passInput.value == '') {
+            passInput.classList.add('input-alert');
+            passAlert.innerHTML = 'Required field.';
+            passInput.parentElement.insertBefore(passAlert, passInput.nextElementSibling);
         }
     }
 
@@ -216,6 +240,10 @@ window.onload = function () {
         } else if (repPass.value !== '') {
             repPass.classList.add('input-alert');
             repPassAlert.innerHTML = 'Invalid password. Refill password field.';
+            repPass.parentElement.insertBefore(repPassAlert, repPass.nextElementSibling);
+        } else if (repPass.value == '') {
+            repPass.classList.add('input-alert');
+            repPassAlert.innerHTML = 'Required field.';
             repPass.parentElement.insertBefore(repPassAlert, repPass.nextElementSibling);
         }
     }
@@ -263,7 +291,7 @@ window.onload = function () {
     // Global functions
     var inputs = [firstName, lastName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
 
-    var names = function (input, pInput) {
+    var names = function (input, inputAlert) {
         var invalid = false;
         if (input.value !== '') {
             for (var i = 0; i < input.value.length; i++) {
@@ -281,13 +309,17 @@ window.onload = function () {
             input.classList.add('input-valid');
         } else if (input.value !== '') {
             input.classList.add('input-alert');
-            pInput.innerHTML = 'Please input at least 4 letters. Only first one capital.';
-            input.parentElement.appendChild(pInput);
+            inputAlert.innerHTML = 'Please input at least 4 letters. Only first one capital.';
+            input.parentElement.appendChild(inputAlert);
+        } else if (input.value == '') {
+            input.classList.add('input-alert');
+            inputAlert.innerHTML = 'Required field.';
+            input.parentElement.insertBefore(inputAlert, input.nextElementSibling);
         }
 
     }
 
-    var addressAndLocation = function (input, pInput) {
+    var addressAndLocation = function (input, inputAlert) {
         var char = '';
         var num = 0;
         var letter = 0;
@@ -296,13 +328,13 @@ window.onload = function () {
             if (char.toLowerCase() === char.toUpperCase() && char !== ' ') {
                 if (isNaN(char)) {
                     input.classList.add('input-alert');
-                    pInput.innerHTML = 'Please input a valid char.';
-                    input.parentElement.appendChild(pInput);
+                    inputAlert.innerHTML = 'Please input a valid char.';
+                    input.parentElement.appendChild(inputAlert);
                 }
             } else if (input.value.substring(0, 1) === ' ' || input.value.substring(input.value.length - 1) === ' ') {
                 input.classList.add('input-alert');
-                pInput.innerHTML = 'Can`t begin or end with whitespaces.';
-                input.parentElement.appendChild(pInput);
+                inputAlert.innerHTML = 'Can`t begin or end with whitespaces.';
+                input.parentElement.appendChild(inputAlert);
             } else {
                 if (isNaN(char)) {
                     letter++;
@@ -311,21 +343,25 @@ window.onload = function () {
                 }
             }
         }
-        if (input == address) {
+        if (input.value == '') {
+            input.classList.add('input-alert');
+            inputAlert.innerHTML = 'Required field.';
+            input.parentElement.insertBefore(inputAlert, input.nextElementSibling);
+        } else if (input == address) {
             if (letter > 2 && num > 0) {
                 input.classList.add('input-valid');
             } else if (!input.classList.contains('input-alert')) {
                 input.classList.add('input-alert');
-                pInput.innerHTML = 'Please input at least 3 letters, 1 number and 1 whitespace.';
-                input.parentElement.appendChild(pInput);
+                inputAlert.innerHTML = 'Please input at least 3 letters, 1 number and 1 whitespace.';
+                input.parentElement.appendChild(inputAlert);
             }
         } else {
             if (letter > 2) {
                 input.classList.add('input-valid');
             } else if (!input.classList.contains('input-alert')) {
                 input.classList.add('input-alert');
-                pInput.innerHTML = 'Please input at least 3 letters.';
-                input.parentElement.appendChild(pInput);
+                inputAlert.innerHTML = 'Please input at least 3 letters.';
+                input.parentElement.appendChild(inputAlert);
             }
         }
     }
@@ -363,7 +399,7 @@ window.onload = function () {
             .then(function (data) {
                 if (data.success) {
                     saveData();
-                    alert('Request successful:\n' + data.msg);
+                    alert('Request successful:\n' + data.msg + '\n' + alertMsg());
                 } else {
                     var alertErrors = '';
                     for (var i = 0; i < data.errors.length; i++) {
@@ -409,7 +445,17 @@ window.onload = function () {
             }
         }
     }
+    // Alert successful
+    var alertMsg = function () {
+        var successAlert = '';
+        for (var i = 0; i < inputs.length; i++) {
+            successAlert += inputs[i].previousElementSibling.innerHTML + ': ';
+            successAlert += inputs[i].value + '\n';
+        }
+        return successAlert;
+    }
 
+    // Load data from local storage
     if (localStorage.length !== 0) {
         loadData();
     }

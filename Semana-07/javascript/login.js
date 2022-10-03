@@ -19,6 +19,10 @@ window.onload = function () {
                 emailAlert.innerHTML = 'Invalid email input';
                 emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
             }
+        } else if (emailInput.value == '') {
+            emailInput.classList.add('input-alert');
+            emailAlert.innerHTML = 'Required field.';
+            emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
         }
     }
 
@@ -68,6 +72,10 @@ window.onload = function () {
                 passAlert.innerHTML = 'Invalid password';
                 passInput.parentElement.insertBefore(passAlert, passInput.nextElementSibling);
             }
+        } else if (passInput.value == '') {
+            passInput.classList.add('input-alert');
+            passAlert.innerHTML = 'Required field.';
+            passInput.parentElement.insertBefore(passAlert, passInput.nextElementSibling);
         }
     }
 
@@ -113,7 +121,7 @@ window.onload = function () {
             })
             .then(function (data) {
                 if (data.success) {
-                    alert('Request successful:\n' + data.msg);
+                    alert('Request successful:\n' + data.msg + '\n' + alertMsg());
                 } else {
                     alert('Login error:\n' + data.msg);
                 }
@@ -121,5 +129,16 @@ window.onload = function () {
             .catch(function (error) {
                 alert('Error:\n' + error);
             })
+    }
+
+    // Alert successful
+    var alertMsg = function () {
+        var inputs = [emailInput, passInput]
+        var successAlert = '';
+        for (var i = 0; i < inputs.length; i++) {
+            successAlert += inputs[i].previousElementSibling.innerHTML + ': ';
+            successAlert += inputs[i].value + '\n';
+        }
+        return successAlert;
     }
 }

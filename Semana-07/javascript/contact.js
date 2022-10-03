@@ -5,7 +5,7 @@ window.onload = function () {
     var message = document.getElementById('message');
 
     // Validate name
-    var pName = document.createElement('p');
+    var nameAlert = document.createElement('p');
     name.onblur = function () {
         var invalid = false;
         var spaces = 0;
@@ -20,20 +20,24 @@ window.onload = function () {
                     }
                 }
             }
+        } else if (name.value == '') {
+            name.classList.add('input-alert');
+            nameAlert.innerHTML = 'Required field.';
+            name.parentElement.insertBefore(nameAlert, name.nextElementSibling);
         }
         if (!invalid && name.value.length - spaces > 3) {
             name.classList.add('input-valid');
         } else if (name.value !== '') {
             name.classList.add('input-alert');
-            pName.classList.add('para-alert');
-            pName.innerHTML = 'Name must have 4 letters at least. No special chars.';
-            name.parentElement.insertBefore(pName, name.nextElementSibling);
+            nameAlert.classList.add('para-alert');
+            nameAlert.innerHTML = 'Name must have 4 letters at least. No special chars.';
+            name.parentElement.insertBefore(nameAlert, name.nextElementSibling);
         }
 
     }
 
     // Validate email
-    var pEmail = document.createElement('p');
+    var emailAlert = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     emailInput.onblur = function () {
         if (emailInput.value !== '') {
@@ -41,15 +45,19 @@ window.onload = function () {
                 emailInput.classList.add('input-valid');
             } else {
                 emailInput.classList.add('input-alert');
-                pEmail.classList.add('para-alert');
-                pEmail.innerHTML = 'Invalid email input';
-                emailInput.parentElement.insertBefore(pEmail, emailInput.nextElementSibling);
+                emailAlert.classList.add('para-alert');
+                emailAlert.innerHTML = 'Invalid email input';
+                emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
             }
+        } else if (emailInput.value == '') {
+            emailInput.classList.add('input-alert');
+            emailAlert.innerHTML = 'Required field.';
+            emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
         }
     }
 
     // Validate message
-    var pMessage = document.createElement('p');
+    var messageAlert = document.createElement('p');
     message.onblur = function () {
         var char = '';
         var num = 0;
@@ -58,9 +66,9 @@ window.onload = function () {
             char = message.value.charAt(i)
             if (message.value.substring(0, 1) === ' ' || message.value.substring(message.value.length - 1) === ' ') {
                 message.classList.add('input-alert');
-                pMessage.classList.add('para-alert');
-                pMessage.innerHTML = 'Can`t begin or end with whitespaces.';
-                message.parentElement.appendChild(pMessage);
+                messageAlert.classList.add('para-alert');
+                messageAlert.innerHTML = 'Can`t begin or end with whitespaces.';
+                message.parentElement.appendChild(messageAlert);
             } else {
                 if (isNaN(char)) {
                     letter++;
@@ -74,9 +82,13 @@ window.onload = function () {
             message.classList.add('input-valid');
         } else if (!message.classList.contains('input-alert') && message.value !== '') {
             message.classList.add('input-alert');
-            pMessage.classList.add('para-alert');
-            pMessage.innerHTML = 'Please input at least 3 chars';
-            message.parentElement.appendChild(pMessage);
+            messageAlert.classList.add('para-alert');
+            messageAlert.innerHTML = 'Please input at least 3 chars';
+            message.parentElement.appendChild(messageAlert);
+        } else if (message.value == '') {
+            message.classList.add('input-alert');
+            messageAlert.innerHTML = 'Required field.';
+            message.parentElement.insertBefore(messageAlert, message.nextElementSibling);
         }
 
     }
@@ -112,17 +124,17 @@ window.onload = function () {
         } else if (area.value == '') {
             alertMsg += 'Select an area please.';
         } else {
-            if (emailInput.parentElement.contains(pEmail)) {
+            if (emailInput.parentElement.contains(emailAlert)) {
                 alertMsg += 'Email:\n';
-                alertMsg += pEmail.innerHTML + '\n';
+                alertMsg += emailAlert.innerHTML + '\n';
             }
-            if (name.parentElement.contains(pName)) {
+            if (name.parentElement.contains(nameAlert)) {
                 alertMsg += 'Name:\n';
-                alertMsg += pName.innerHTML;
+                alertMsg += nameAlert.innerHTML;
             }
-            if (message.parentElement.contains(pMessage)) {
+            if (message.parentElement.contains(messageAlert)) {
                 alertMsg += '\nMessage:\n';
-                alertMsg += pMessage.innerHTML;
+                alertMsg += messageAlert.innerHTML;
             }
         }
         if (alertMsg == '') {

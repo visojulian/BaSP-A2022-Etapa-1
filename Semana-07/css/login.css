@@ -27,5 +27,10 @@ section#login form {
 }
 
 section#login li {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+}
+
+section#login input ~ p {
+    margin-bottom: 3px;
+    color: #FF3E1D;
 }
