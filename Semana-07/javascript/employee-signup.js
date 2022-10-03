@@ -1,5 +1,4 @@
 window.onload = function () {
-
     // Validate first name
     var fName = document.getElementById('first-name');
     var pFName = document.createElement('p');
@@ -228,7 +227,7 @@ window.onload = function () {
 
     // Create button
     var btnCreate = document.querySelector('#btn-create');
-    var inputs = [fName, lName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
+
     btnCreate.onclick = function (e) {
         e.preventDefault();
         var valids = 0;
@@ -262,6 +261,8 @@ window.onload = function () {
     }
 
     // Global functions
+    var inputs = [fName, lName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
+
     var names = function (input, pInput) {
         var invalid = false;
         if (input.value !== '') {
@@ -361,6 +362,7 @@ window.onload = function () {
             })
             .then(function (data) {
                 if (data.success) {
+                    saveData();
                     alert('Request successful:\n' + data.msg);
                 } else {
                     var alertErrors = '';
@@ -375,5 +377,40 @@ window.onload = function () {
             })
     }
 
+    var saveData = function () {
+        localStorage.setItem('name', fName.value);
+        localStorage.setItem('lastName', lName.value);
+        localStorage.setItem('dni', dni.value);
+        localStorage.setItem('dob', date.value);
+        localStorage.setItem('phone', phone.value);
+        localStorage.setItem('address', address.value);
+        localStorage.setItem('city', location.value);
+        localStorage.setItem('zip', postal.value);
+        localStorage.setItem('email', emailInput.value);
+        localStorage.setItem('password', passInput.value);
+    }
 
+    function loadData() {
+        fName.value = localStorage.getItem('name');
+        lName.value = localStorage.getItem('lastName');
+        dni.value = localStorage.getItem('dni');
+        date.value = localStorage.getItem('dob');
+        phone.value = localStorage.getItem('phone');
+        address.value = localStorage.getItem('address');
+        location.value = localStorage.getItem('city');
+        postal.value = localStorage.getItem('zip');
+        emailInput.value = localStorage.getItem('email');
+        passInput.value = localStorage.getItem('password');
+        repPass.value = localStorage.getItem('password');
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value !== '') {
+                inputs[i].classList.add('input-valid');
+            }
+        }
+    }
+
+    if (localStorage.length !== 0) {
+        loadData();
+    }
 }
