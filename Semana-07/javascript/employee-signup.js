@@ -1,39 +1,39 @@
 window.onload = function () {
     // Validate first name
-    var fName = document.getElementById('first-name');
-    var pFName = document.createElement('p');
-    fName.onblur = function () {
-        names(fName, pFName);
+    var firstName = document.getElementById('first-name');
+    var firstNameAlert = document.createElement('p');
+    firstName.onblur = function () {
+        names(firstName, firstNameAlert);
     }
 
     // Modify first name
-    fName.onfocus = function () {
-        removes(fName);
+    firstName.onfocus = function () {
+        removes(firstName);
     }
 
     // Validate last name
-    var lName = document.getElementById('last-name');
-    var pLName = document.createElement('p');
-    lName.onblur = function () {
-        names(lName, pLName);
+    var lastName = document.getElementById('last-name');
+    var lastNameAlert = document.createElement('p');
+    lastName.onblur = function () {
+        names(lastName, lastNameAlert);
     }
 
     // Modify last name
-    lName.onfocus = function () {
-        removes(lName);
+    lastName.onfocus = function () {
+        removes(lastName);
     }
 
     // Validate DNI
     var dni = document.getElementById('dni');
-    var pDni = document.createElement('p');
+    var dniAlert = document.createElement('p');
     dni.onblur = function () {
         if (NaN !== isNaN(dni.value) && dni.value !== '') {
             if (dni.value.length == 8 && dni.value > 999999) {
                 dni.classList.add('input-valid');
             } else {
                 dni.classList.add('input-alert');
-                pDni.innerHTML = 'Please check your DNI number. Must be greather than 999.999.';
-                dni.parentElement.appendChild(pDni);
+                dniAlert.innerHTML = 'Please check your DNI number. Must be greather than 999.999.';
+                dni.parentElement.appendChild(dniAlert);
             }
         }
     }
@@ -45,7 +45,7 @@ window.onload = function () {
 
     // Validate birthday
     var date = document.querySelector('input#date');
-    var pDate = document.createElement('p');
+    var dateAlert = document.createElement('p');
 
     date.onblur = function () {
         if (date.value !== '') {
@@ -54,8 +54,8 @@ window.onload = function () {
                 date.classList.add('input-valid');
             } else {
                 date.classList.add('input-alert');
-                pDate.innerHTML = 'You must be +18 for register.';
-                date.parentElement.appendChild(pDate);
+                dateAlert.innerHTML = 'You must be +18 for register.';
+                date.parentElement.appendChild(dateAlert);
             }
         }
     }
@@ -67,15 +67,15 @@ window.onload = function () {
 
     // Validate phone
     var phone = document.getElementById('phone');
-    var pPhone = document.createElement('p');
+    var phoneAlert = document.createElement('p');
     phone.onblur = function () {
         if (phone.value !== '') {
             if (phone.value.length == 10) {
                 phone.classList.add('input-valid');
             } else {
                 phone.classList.add('input-alert');
-                pPhone.innerHTML = 'Please input a valid phone. Only numbers.';
-                phone.parentElement.appendChild(pPhone);
+                phoneAlert.innerHTML = 'Please input a valid phone. Only numbers.';
+                phone.parentElement.appendChild(phoneAlert);
             }
         }
     }
@@ -87,9 +87,9 @@ window.onload = function () {
 
     // Validate address
     var address = document.querySelector('input#address');
-    var pAddress = document.createElement('p');
+    var addressAlert = document.createElement('p');
     address.onblur = function () {
-        addressAndLocation(address, pAddress);
+        addressAndLocation(address, addressAlert);
     }
 
     // Modify address
@@ -99,9 +99,9 @@ window.onload = function () {
 
     // Validate location
     var location = document.querySelector('input#location');
-    var pLocation = document.createElement('p');
+    var locationAlert = document.createElement('p');
     location.onblur = function () {
-        addressAndLocation(location, pLocation);
+        addressAndLocation(location, locationAlert);
     }
 
     // Modify location
@@ -111,7 +111,7 @@ window.onload = function () {
 
     // Validate postal code
     var postal = document.querySelector('input#postal');
-    var pPostal = document.createElement('p');
+    var postalAlert = document.createElement('p');
     postal.onblur = function () {
         if (postal.value != '') {
             if (postal.value.length > 3 && postal.value.length < 6
@@ -119,8 +119,8 @@ window.onload = function () {
                 postal.classList.add('input-valid');
             } else {
                 postal.classList.add('input-alert');
-                pPostal.innerHTML = 'Invalid postal code.';
-                postal.parentElement.appendChild(pPostal);
+                postalAlert.innerHTML = 'Invalid postal code.';
+                postal.parentElement.appendChild(postalAlert);
             }
         }
     }
@@ -133,7 +133,7 @@ window.onload = function () {
 
     // Validate emailInput
     var emailInput = document.getElementById('email');
-    var pEmail = document.createElement('p');
+    var emailAlert = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     emailInput.onblur = function () {
         if (emailInput.value !== '') {
@@ -141,8 +141,8 @@ window.onload = function () {
                 emailInput.classList.add('input-valid');
             } else {
                 emailInput.classList.add('input-alert');
-                pEmail.innerHTML = 'Invalid email input';
-                emailInput.parentElement.insertBefore(pEmail, emailInput.nextElementSibling);
+                emailAlert.innerHTML = 'Invalid email input';
+                emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
             }
         }
     }
@@ -202,7 +202,7 @@ window.onload = function () {
 
     // Validate repeat password
     var repPass = document.getElementById('pass-repeat');
-    var pRepPass = document.createElement('p');
+    var repPassAlert = document.createElement('p');
     repPass.onblur = function () {
         if (passInput.classList.contains('input-valid') &&
             repPass.value !== '') {
@@ -210,13 +210,13 @@ window.onload = function () {
                 repPass.classList.add('input-valid');
             } else {
                 repPass.classList.add('input-alert');
-                pRepPass.innerHTML = 'Please repeat the same password from previous field.';
-                repPass.parentElement.insertBefore(pRepPass, repPass.nextElementSibling);
+                repPassAlert.innerHTML = 'Please repeat the same password from previous field.';
+                repPass.parentElement.insertBefore(repPassAlert, repPass.nextElementSibling);
             }
         } else if (repPass.value !== '') {
             repPass.classList.add('input-alert');
-            pRepPass.innerHTML = 'Invalid password. Refill password field.';
-            repPass.parentElement.insertBefore(pRepPass, repPass.nextElementSibling);
+            repPassAlert.innerHTML = 'Invalid password. Refill password field.';
+            repPass.parentElement.insertBefore(repPassAlert, repPass.nextElementSibling);
         }
     }
 
@@ -261,7 +261,7 @@ window.onload = function () {
     }
 
     // Global functions
-    var inputs = [fName, lName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
+    var inputs = [firstName, lastName, dni, date, phone, address, location, postal, emailInput, passInput, repPass];
 
     var names = function (input, pInput) {
         var invalid = false;
@@ -345,8 +345,8 @@ window.onload = function () {
 
     // Fetch server
     var runRequest = function () {
-        var query = 'name=' + fName.value
-            + '&lastName=' + lName.value
+        var query = 'name=' + firstName.value
+            + '&lastName=' + lastName.value
             + '&dni=' + dni.value
             + '&dob=' + formatDate(date.value)
             + '&phone=' + phone.value
@@ -378,8 +378,8 @@ window.onload = function () {
     }
 
     var saveData = function () {
-        localStorage.setItem('name', fName.value);
-        localStorage.setItem('lastName', lName.value);
+        localStorage.setItem('name', firstName.value);
+        localStorage.setItem('lastName', lastName.value);
         localStorage.setItem('dni', dni.value);
         localStorage.setItem('dob', date.value);
         localStorage.setItem('phone', phone.value);
@@ -391,8 +391,8 @@ window.onload = function () {
     }
 
     function loadData() {
-        fName.value = localStorage.getItem('name');
-        lName.value = localStorage.getItem('lastName');
+        firstName.value = localStorage.getItem('name');
+        lastName.value = localStorage.getItem('lastName');
         dni.value = localStorage.getItem('dni');
         date.value = localStorage.getItem('dob');
         phone.value = localStorage.getItem('phone');

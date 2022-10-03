@@ -3,10 +3,10 @@ window.onload = function () {
     // Global Variables
     var btnLogin = document.getElementById('btn-login');
     var emailInput = document.getElementById('email');
-    var pEmail = document.createElement('p');
+    var emailAlert = document.createElement('p');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var passInput = document.getElementById('pass');
-    var pPass = document.createElement('p');
+    var passAlert = document.createElement('p');
 
 
     // Validate emailInput
@@ -16,8 +16,8 @@ window.onload = function () {
                 emailInput.classList.add('input-valid');
             } else {
                 emailInput.classList.add('input-alert');
-                pEmail.innerHTML = 'Invalid email input';
-                emailInput.parentElement.insertBefore(pEmail, emailInput.nextElementSibling);
+                emailAlert.innerHTML = 'Invalid email input';
+                emailInput.parentElement.insertBefore(emailAlert, emailInput.nextElementSibling);
             }
         }
     }
@@ -25,8 +25,8 @@ window.onload = function () {
     // Modify email
     emailInput.onfocus = function () {
         emailInput.classList.remove('input-valid', 'input-alert');
-        if (emailInput.parentElement.contains(pEmail)) {
-            emailInput.parentElement.removeChild(pEmail);
+        if (emailInput.parentElement.contains(emailAlert)) {
+            emailInput.parentElement.removeChild(emailAlert);
         }
     }
 
@@ -65,8 +65,8 @@ window.onload = function () {
                 passInput.classList.add('input-valid');
             } else {
                 passInput.classList.add('input-alert');
-                pPass.innerHTML = 'Invalid password';
-                passInput.parentElement.insertBefore(pPass, passInput.nextElementSibling);
+                passAlert.innerHTML = 'Invalid password';
+                passInput.parentElement.insertBefore(passAlert, passInput.nextElementSibling);
             }
         }
     }
@@ -74,8 +74,8 @@ window.onload = function () {
     // Modify pass
     passInput.onfocus = function () {
         passInput.classList.remove('input-valid', 'input-alert');
-        if (passInput.parentElement.contains(pPass)) {
-            passInput.parentElement.removeChild(pPass);
+        if (passInput.parentElement.contains(passAlert)) {
+            passInput.parentElement.removeChild(passAlert);
         }
     }
 
@@ -87,13 +87,13 @@ window.onload = function () {
             alertMsg = 'Please complete all fields to login';
             alert(alertMsg);
         } else {
-            if (emailInput.parentElement.contains(pEmail)) {
+            if (emailInput.parentElement.contains(emailAlert)) {
                 alertMsg = 'Login error:\n';
-                alertMsg += pEmail.innerHTML + '\n';
+                alertMsg += emailAlert.innerHTML + '\n';
             }
-            if (passInput.parentElement.contains(pPass)) {
+            if (passInput.parentElement.contains(passAlert)) {
                 alertMsg = 'Login error:\n';
-                alertMsg += pPass.innerHTML;
+                alertMsg += passAlert.innerHTML;
             }
             if (alertMsg !== '') {
                 alert(alertMsg);
