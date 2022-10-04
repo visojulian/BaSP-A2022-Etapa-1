@@ -93,7 +93,7 @@ window.onload = function () {
         var alertMsg = '';
         if (emailInput.value == '' || passInput.value == '') {
             alertMsg = 'Please complete all fields to login';
-            alert(alertMsg);
+            openModal('Can´t login:', alertMsg);
         } else {
             if (emailInput.parentElement.contains(emailAlert)) {
                 alertMsg = 'Login error:\n';
@@ -104,7 +104,7 @@ window.onload = function () {
                 alertMsg += passAlert.innerHTML;
             }
             if (alertMsg !== '') {
-                alert(alertMsg);
+                openModal('Can´t login:', alertMsg);
             }
         }
         if (alertMsg == '') {
@@ -121,13 +121,13 @@ window.onload = function () {
             })
             .then(function (data) {
                 if (data.success) {
-                    alert('Request successful:\n' + data.msg + '\n' + alertMsg());
+                    openModal('Request successful:' + data.msg + '\n' + alertMsg());
                 } else {
                     throw new Error(data.msg);
                 }
             })
             .catch(function (error) {
-                alert('There are some input errors:\n' + error);
+                openModal('There are some input errors:', error);
             })
     }
 
@@ -140,5 +140,35 @@ window.onload = function () {
             successAlert += inputs[i].value + '\n';
         }
         return successAlert;
+    }
+
+    // Create modal
+    var openModal = function (title, modalData) {
+        var modal = document.createElement('div');
+        var modalTitle = document.createElement('p');
+        var modalInfo = document.createElement('p');
+        var content = document.createElement('div');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        modalTitle.classList.add('aside-title');
+        content.classList.add('modal-content');
+        closeBtn.classList.add('close');
+
+        closeBtn.innerHTML = '&times;';
+        modalTitle.innerHTML = title;
+        modalInfo.innerText = modalData;
+
+        content.appendChild(closeBtn);
+        content.appendChild(modalTitle);
+        content.appendChild(modalInfo);
+        modal.appendChild(content);
+
+        closeBtn.onclick = function () {
+            modal.classList.remove('modal');
+            modal.classList.add('display-none');
+        }
+
+        document.body.appendChild(modal);
     }
 }

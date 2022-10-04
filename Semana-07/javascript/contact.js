@@ -141,8 +141,36 @@ window.onload = function () {
             alertMsg = 'Message sent succesfully.\nThank you!\n' +
                 name.value + '\n' + emailInput.value + '\n' + area[area.selectedIndex].innerHTML + '\n' + message.value;
         }
-        alert(alertMsg);
+        openModal('Contact:', alertMsg);
     }
 
+    // Create modal
+    var openModal = function (title, modalData) {
+        var modal = document.createElement('div');
+        var modalTitle = document.createElement('p');
+        var modalInfo = document.createElement('p');
+        var content = document.createElement('div');
+        var closeBtn = document.createElement('span');
 
+        modal.classList.add('modal');
+        modalTitle.classList.add('aside-title');
+        content.classList.add('modal-content');
+        closeBtn.classList.add('close');
+
+        closeBtn.innerHTML = '&times;';
+        modalTitle.innerHTML = title;
+        modalInfo.innerText = modalData;
+
+        content.appendChild(closeBtn);
+        content.appendChild(modalTitle);
+        content.appendChild(modalInfo);
+        modal.appendChild(content);
+
+        closeBtn.onclick = function () {
+            modal.classList.remove('modal');
+            modal.classList.add('display-none');
+        }
+
+        document.body.appendChild(modal);
+    }
 }

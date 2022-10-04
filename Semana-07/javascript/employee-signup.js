@@ -265,7 +265,10 @@ window.onload = function () {
             if (inputs[i].classList.contains('input-valid')) {
                 valids++;
             } else if (inputs[i].classList.contains('input-alert')) {
-                errors.push(inputs[i].nextElementSibling);
+                errors.push({
+                    field: inputs[i].previousElementSibling.innerHTML,
+                    value: inputs[i].nextElementSibling.innerHTML
+                });
             }
         }
         if (valids == inputs.length) {
@@ -273,17 +276,16 @@ window.onload = function () {
 
         } else if (errors.length == 0) {
             alertMsg = 'Please check the form. All fields are required.';
-            alert(alertMsg);
+            openModal('Incomplete form:', alertMsg);
         } else {
-            alertMsg = 'There are some inputs errors:\n';
+            alertMsg = '';
             if (errors.length + valids !== inputs.length) {
                 alertMsg += 'Remember complete all fields.\n'
             }
             for (var i = 0; i < errors.length; i++) {
-                alertMsg += inputs[i].previousElementSibling.innerHTML + ': ';
-                alertMsg += errors[i].innerHTML + '\n';
+                alertMsg += errors[i].field + ': ' + errors[i].value;
             }
-            alert(alertMsg);
+            openModal('There are some errors:', alertMsg);
         }
 
     }
@@ -399,7 +401,7 @@ window.onload = function () {
             .then(function (data) {
                 if (data.success) {
                     saveData();
-                    alert('Request successful:\n' + data.msg + '\n' + alertMsg());
+                    openModal('Request successful:', data.msg + '\n' + alertMsg());
                 } else {
                     var alertErrors = '';
                     for (var i = 0; i < data.errors.length; i++) {
@@ -409,7 +411,7 @@ window.onload = function () {
                 }
             })
             .catch(function (error) {
-                alert('There are some input errors:\n' + error);
+                openModal('There are some input errors:', error);
             })
     }
 
@@ -426,7 +428,7 @@ window.onload = function () {
         localStorage.setItem('password', passInput.value);
     }
 
-    function loadData() {
+    var loadData = function () {
         firstName.value = localStorage.getItem('name');
         lastName.value = localStorage.getItem('lastName');
         dni.value = localStorage.getItem('dni');
@@ -454,6 +456,37 @@ window.onload = function () {
         }
         return successAlert;
     }
+
+    // Create modal
+    var openModal = function (title, modalData) {
+        var modal = document.createElement('div');
+        var modalTitle = document.createElement('p');
+        var modalInfo = document.createElement('p');
+        var content = document.createElement('div');
+        var closeBtn = document.createElement('span');
+
+        modal.classList.add('modal');
+        modalTitle.classList.add('aside-title');
+        content.classList.add('modal-content');
+        closeBtn.classList.add('close');
+
+        closeBtn.innerHTML = '&times;';
+        modalTitle.innerHTML = title;
+        modalInfo.innerText = modalData;
+
+        content.appendChild(closeBtn);
+        content.appendChild(modalTitle);
+        content.appendChild(modalInfo);
+        modal.appendChild(content);
+
+        closeBtn.onclick = function () {
+            modal.classList.remove('modal');
+            modal.classList.add('display-none');
+        }
+
+        document.body.appendChild(modal);
+    }
+
 
     // Load data from local storage
     if (localStorage.length !== 0) {
