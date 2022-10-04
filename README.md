@@ -98,21 +98,21 @@ Use JSDOM to create active forms: contact, login and sign-up
 
 Keep using Flexbox
 
-[See this week work](Semana-06/views/index.html)
+[See this week work](Semana-06/views/javascript)
 
 [Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html)
 
 ---
-### Week 06 - JSDOM
+### Week 07 - JS ASYNC AND STORAGE
 New folder: Semana-07
 
 First async method usage: use fetch() to link remote server and handle resposes and errors
 
 Also implementing localStorage to preserve some data from user inputs
 
-[See this week work](Semana-07/views/index.html)
+[See this week work](Semana-07/javascript)
 
-[Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html)
+[Deploy](https://visojulian.github.io/BaSP-A2022-Etapa-1/Semana-07/views/login.html)
 
 ---
 
