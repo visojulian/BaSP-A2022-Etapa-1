@@ -400,7 +400,8 @@ window.onload = function () {
             })
             .then(function (data) {
                 if (data.success) {
-                    saveData();
+                    console.log(data)
+                    saveData(data.data);
                     openModal('Request successful:', data.msg + '\n' + alertMsg());
                 } else {
                     var alertErrors = '';
@@ -415,17 +416,17 @@ window.onload = function () {
             })
     }
 
-    var saveData = function () {
-        localStorage.setItem('name', firstName.value);
-        localStorage.setItem('lastName', lastName.value);
-        localStorage.setItem('dni', dni.value);
-        localStorage.setItem('dob', date.value);
-        localStorage.setItem('phone', phone.value);
-        localStorage.setItem('address', address.value);
-        localStorage.setItem('city', location.value);
-        localStorage.setItem('zip', postal.value);
-        localStorage.setItem('email', emailInput.value);
-        localStorage.setItem('password', passInput.value);
+    var saveData = function (data) {
+        localStorage.setItem('name', data.name);
+        localStorage.setItem('lastName', data.lastName);
+        localStorage.setItem('dni', data.dni);
+        localStorage.setItem('dob', data.date);
+        localStorage.setItem('phone', data.phone);
+        localStorage.setItem('address', data.address);
+        localStorage.setItem('city', data.city);
+        localStorage.setItem('zip', data.zip);
+        localStorage.setItem('email', data.email);
+        localStorage.setItem('password', data.password);
     }
 
     var loadData = function () {
