@@ -123,11 +123,11 @@ window.onload = function () {
                 if (data.success) {
                     alert('Request successful:\n' + data.msg + '\n' + alertMsg());
                 } else {
-                    alert('Login error:\n' + data.msg);
+                    throw new Error(data.msg);
                 }
             })
             .catch(function (error) {
-                alert('Error:\n' + error);
+                alert('There are some input errors:\n' + error);
             })
     }
 

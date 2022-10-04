@@ -405,11 +405,11 @@ window.onload = function () {
                     for (var i = 0; i < data.errors.length; i++) {
                         alertErrors += data.errors[i].msg + '\n';
                     }
-                    alert('Signup error:\n' + alertErrors);
+                    throw new Error(alertErrors);
                 }
             })
             .catch(function (error) {
-                alert('Error:\n' + error);
+                alert('There are some input errors:\n' + error);
             })
     }
 
